@@ -1,6 +1,9 @@
 # ETSIIT_BOT
-Telegram bot with information about E.T.S.I.I.T. of the Granada's university
+Bot de telegram sobre la ETSIIT de la universidad de Granada
 
 La idea de este bot es proporcionar información sobre la escuela de manera simple y sencilla.
 
-Por ahora solo tiene la función de porporcionar el horario del curso 2015/2016 para el grado de ingeniera informática.
+##Funcionalidades
+
+* /horario => Da el horario del curso 2015/2016 para el grado de ingeniería informática.
+* /hola => Su uso es para probar configuraciones
