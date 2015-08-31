@@ -5,5 +5,5 @@ La idea de este bot es proporcionar información sobre la escuela de manera simp
 
 ##Funcionalidades
 
-* /horario => Da el horario del curso 2015/2016 para el grado de ingeniería informática.
+* /horario => Horario del curso 2015/2016 para el grado de ingeniería informática.
 * /hola => Su uso es para probar configuraciones
