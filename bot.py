@@ -4,7 +4,8 @@ import time
 import urllib2, cookielib, os.path
 
 
-TOKEN = '130984576:AAGwSFR-CQcl0S0Bnc7oAyfGoD9Ko92Klhg'
+TOKEN = '130984576:AAFDhHdC8kalZzbktH-wZMLp0txRYHyyvio'
+
 
 bot = telebot.TeleBot(TOKEN) # Creamos el objeto de nuestro bot.
 
@@ -16,21 +17,35 @@ def listener(messages):
 bot.set_update_listener(listener) 
 
 bot.polling(none_stop=True) 
-
-#Horario grado ingenieria informatica
-
-@bot.message_handler(commands=['horario_gii'])
-def obtener_horario_gii(m):
-    cid = m.chat.id 
+# Comprobamos si existe el fichero y se actua en consecuencia
+def comprobar_fichero(grado,id_chat):
     
-    if os.path.isfile('horario_gii.pdf'):
-        bot.send_document(cid, open( 'horario_gii.pdf', 'rb'))
-
-    else:
-        url = 'http://etsiit.ugr.es/pages/calendario_academico/horarios1516/horariosgii1516/!'
+    nombre_fichero = 'horarios_gi'
+    descriptor = 'horariosgi'
+    
+    if grado == 'informatica':
+        descriptor += 'i1516/!'
+        nombre_fichero += 'i.pdf'
         
+    elif grado == 'teleco':
+        descriptor += 'tt1516/!'
+        nombre_fichero += 't.pdf'
+    
+    elif grado == 'matematicas':
+       descriptor +=  'm1516/!'
+       nombre_fichero += 'm.pdf'
+    
+    if os.path.isfile(nombre_fichero):
+        bot.send_document(id_chat, open( nombre_fichero, 'rb'))
+    
+    else:
+        url = 'http://etsiit.ugr.es/pages/calendario_academico/horarios1516/' + descriptor
+
+        bot.send_message(id_chat,url)
         cj = cookielib.CookieJar()
+        
         opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
+        
         request = urllib2.Request(url)
         
         f = opener.open(request)
@@ -38,63 +53,42 @@ def obtener_horario_gii(m):
         f.close()
         opener.close()
         
-        FILE = open('horario_gii.pdf', "wb+")
+        FILE = open(nombre_fichero, "wb+")
         FILE.write(data)
         FILE.close()
-         
-        bot.send_document(cid, open( 'horario_gii.pdf', 'rb'))
-    #Horario grado ingenieria informatica
+        
+        bot.send_document(id_chat, open( nombre_fichero, 'rb'))
 
+
+        
+def obtener_horario(grado,id_chat):
+    if grado == 'informatica':
+        comprobar_fichero('informatica',id_chat)
+        
+    elif grado == 'teleco':
+        comprobar_fichero('teleco',id_chat)
+        
+    elif grado == 'matematicas':
+        comprobar_fichero('matematicas',id_chat)
+        
+#Horario grado ingenieria informatica
+    
+@bot.message_handler(commands=['horario_gii'])
+def obtener_horario_gii(m):
+    obtener_horario('informatica',m.chat.id)
+
+
+#Horario grado ingenieria telecomunicaciones
 
 @bot.message_handler(commands=['horario_git'])
 def obtener_horario_git(m):
-    cid = m.chat.id 
-    
-    if os.path.isfile('horario_git.pdf'):
-        bot.send_document(cid, open( 'horario_git.pdf', 'rb'))
+    obtener_horario('teleco',m.chat.id)
+        
+#Horario grado ingenieria inf+mates
 
-    else:
-        url = 'http://etsiit.ugr.es/pages/calendario_academico/horarios1516/horariosgitt1516/!'
-        
-        cj = cookielib.CookieJar()
-        opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
-        request = urllib2.Request(url)
-        
-        f = opener.open(request)
-        data = f.read()
-        f.close()
-        opener.close()
-        
-        FILE = open('horario_git.pdf', "wb+")
-        FILE.write(data)
-        FILE.close()
-         
-        bot.send_document(cid, open( 'horario_git.pdf', 'rb'))
-        
-        
 @bot.message_handler(commands=['horario_gim'])
 def obtener_horario_gim(m):
-    cid = m.chat.id 
+    obtener_horario('matematicas',m.chat.id)
     
-    if os.path.isfile('horario_gim.pdf'):
-        bot.send_document(cid, open( 'horario_gim.pdf', 'rb'))
-
-    else:
-        url = 'http://etsiit.ugr.es/pages/calendario_academico/horarios1516/horariosgim1516/!'
-        
-        cj = cookielib.CookieJar()
-        opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
-        request = urllib2.Request(url)
-        
-        f = opener.open(request)
-        data = f.read()
-        f.close()
-        opener.close()
-        
-        FILE = open('horario_gim.pdf', "wb+")
-        FILE.write(data)
-        FILE.close()
-         
-        bot.send_document(cid, open( 'horario_gim.pdf', 'rb'))
 while True: 
     time.sleep(0)
