@@ -11,3 +11,7 @@ La idea de este bot es proporcionar información sobre la escuela de manera simp
 * /horario_git => Horario del curso 2015/2016 para el grado de ingeniería en telecomunicaciones.
 * /horario_gim => Horario del curso 2015/2016 para el doble grado informática matemáticas.
 
+
+##Agradecimientos
+
+* [Jesus Sánchez de Castro](https://github.com/Yissoft) por el logo
