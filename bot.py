@@ -3,6 +3,7 @@ from telebot import types
 import time 
 import urllib2, cookielib, os.path
 
+TOKEN = '130984576:AAFDhHdC8kalZzbktH-wZMLp0txRYHyyvio'
 
 
 bot = telebot.TeleBot(TOKEN) # Creamos el objeto de nuestro bot.
@@ -104,6 +105,6 @@ def obtener_horario_git(m):
 @bot.message_handler(commands=['horario_gim'])
 def obtener_horario_gim(m):
     obtener_horario('matematicas',m)
-    
+
 while True: 
     time.sleep(300)

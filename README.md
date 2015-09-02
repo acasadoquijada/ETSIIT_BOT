@@ -12,6 +12,9 @@ La idea de este bot es proporcionar información sobre la escuela de manera simp
 * /horario_gim => Horario del curso 2015/2016 para el doble grado informática matemáticas.
 
 
-##Agradecimientos
+##Colaboradores
 
-* [Jesus Sánchez de Castro](https://github.com/Yissoft) por el logo
+* [Jesus Sánchez de Castro](https://github.com/Yissoft) diseñador del logo
+
+##Contacto
+acasadoquiada@gmail.com
