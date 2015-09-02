@@ -3,7 +3,6 @@ from telebot import types
 import time 
 import urllib2, cookielib, os.path
 
-TOKEN = '130984576:AAFDhHdC8kalZzbktH-wZMLp0txRYHyyvio'
 
 
 bot = telebot.TeleBot(TOKEN) # Creamos el objeto de nuestro bot.
