@@ -3,6 +3,7 @@ from telebot import types
 import time 
 import urllib2, cookielib, os.path
 
+TOKEN = '130984576:AAFDhHdC8kalZzbktH-wZMLp0txRYHyyvio'
 
 
 bot = telebot.TeleBot(TOKEN) # Creamos el objeto de nuestro bot.
@@ -29,8 +30,8 @@ def log(m):
         aux.close()
         
 bot.polling(none_stop=True) 
-# Comprobamos si existe el fichero y se actua en consecuencia
-def comprobar_fichero(grado,m):
+# Comprobamos si existe el horario y se actua en consecuencia
+def mandar_horario(grado,m):
     
     try:
         log(m)
@@ -74,36 +75,24 @@ def comprobar_fichero(grado,m):
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
 
-
-        
-def obtener_horario(grado,m):
-    if grado == 'informatica':
-        comprobar_fichero('informatica',m)
-        
-    elif grado == 'teleco':
-        comprobar_fichero('teleco',m)
-        
-    elif grado == 'matematicas':
-        comprobar_fichero('matematicas',m)
-        
 #Horario grado ingenieria informatica
     
 @bot.message_handler(commands=['horario_gii'])
 def obtener_horario_gii(m):
-    obtener_horario('informatica',m)
+    mandar_horario('informatica',m)
 
 
 #Horario grado ingenieria telecomunicaciones
 
 @bot.message_handler(commands=['horario_git'])
 def obtener_horario_git(m):
-    obtener_horario('teleco',m)
+    mandar_horario('teleco',m)
         
 #Horario grado ingenieria inf+mates
 
 @bot.message_handler(commands=['horario_gim'])
 def obtener_horario_gim(m):
-    obtener_horario('matematicas',m)
+    mandar_horario('matematicas',m)
 
 while True: 
     time.sleep(300)
