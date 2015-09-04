@@ -17,4 +17,4 @@ La idea de este bot es proporcionar información sobre la escuela de manera simp
 * [Jesus Sánchez de Castro](https://github.com/Yissoft) diseñador del logo
 
 ##Contacto
-acasadoquiada@gmail.com
+acasadoquijada@gmail.com
