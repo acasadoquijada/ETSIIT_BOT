@@ -18,3 +18,5 @@ La idea de este bot es proporcionar información sobre la escuela de manera simp
 
 ##Contacto
 acasadoquijada@gmail.com
+
+[Licencia](https://github.com/acasadoquijada/ETSIIT_BOT/blob/master/LICENSE)
