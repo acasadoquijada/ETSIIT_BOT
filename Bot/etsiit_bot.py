@@ -1,3 +1,5 @@
+# --* coding: utf-8 -*-
+
 import telebot 
 from telebot import types 
 import urllib2, cookielib, os.path, time, sys
@@ -5,6 +7,9 @@ import urllib2, cookielib, os.path, time, sys
 sys.path.append('../informacion/')
 from conf import token
 
+
+reload(sys) 
+sys.setdefaultencoding("utf-8")
 
 bot = telebot.TeleBot(token) # Creamos el objeto de nuestro bot.
 
@@ -48,6 +53,8 @@ def exception_log(e,m):
     
     
 bot.polling(none_stop=True) 
+
+
 # Comprobamos si existe el horario y se actua en consecuencia
 def mandar_horario(grado,m):
     
@@ -75,7 +82,7 @@ def mandar_horario(grado,m):
         else:
             url = 'http://etsiit.ugr.es/pages/calendario_academico/horarios1516/' + descriptor
             cj = cookielib.CookieJar()
-            
+        
             opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
             
             request = urllib2.Request(url)
@@ -96,6 +103,33 @@ def mandar_horario(grado,m):
         exception_log(e,m)
 
 
+# Contacto
+
+@bot.message_handler(commands=['contacto'])
+def contacto(m):
+    
+    cid = m.chat.id
+
+    mensaje = "¡Hola!\n\nAqui tienes información sobre nosotros:\n\n" \
+    "Contacto: acasadoquijada@gmail.com\n" \
+    "Repositorio: https://github.com/acasadoquijada/ETSIIT_BOT\n"
+    bot.send_message(cid,mensaje)    
+    
+# Funcion start
+
+@bot.message_handler(commands=['start'])
+def start(m):
+    
+    cid = m.chat.id
+
+    mensaje = "¡Hola!\n\nSoy el bot de la E.T.S.I.I.T de Granada" \
+    ", estoy aqui para proporcionarte informacion sobre ella, como horarios, examenes..\n" \
+    "Actualmente estoy en construccion, si echas en falta alguna funcionalidad puedes" \
+    "enviarnos una sugerencia o, ¡incorporarla tu mismo!\n\n" \
+    "Contacto: acasadoquijada@gmail.com\n" \
+    "Repositorio: https://github.com/acasadoquijada/ETSIIT_BOT\n"
+    bot.send_message(cid,mensaje)
+    
 #Horario grado ingenieria informatica
     
 @bot.message_handler(commands=['horario_gii'])
@@ -114,6 +148,8 @@ def obtener_horario_git(m):
 @bot.message_handler(commands=['horario_gim'])
 def obtener_horario_gim(m):
     mandar_horario('matematicas',m)
+    
+
 
 while True: 
     time.sleep(300)
