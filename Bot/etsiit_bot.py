@@ -17,17 +17,17 @@ bot.set_update_listener(listener)
 
 #Registro de actividad
 def log(m):
-        id_usuario = m.from_user.id
-        nombre_usuario = m.from_user.first_name
-        apellido_usuario = m.from_user.last_name
-        hora = time.strftime("%H:%M:%S")
-        fecha = time.strftime("%d/%m/%y")
-        
-        informacion = "["+ str(fecha) + ' ' + str(hora) + ' ' +str(nombre_usuario) + ' '  + str(apellido_usuario) + ' ' + str(id_usuario) + "]: " + m.text 
-        
-        aux = open( '../informacion/registro.txt', 'a') # Y lo insertamos en el fichero 'usuarios.txt'
-        aux.write( str(informacion) + "\n")
-        aux.close()
+    user_id = m.from_user.id
+    name = m.from_user.first_name
+    last_name = m.from_user.last_name
+    username = m.from_user.username
+    hour = time.strftime("%H:%M:%S")
+    date = time.strftime("%d/%m/%y")
+    information = "["+ str(date) + ' ' + str(hour) + ' ' +str(name)  + ' ' +  str(last_name) + ' ' + str(user_id) + ' @' + str(username) + "]: " + m.text 
+    
+    aux = open( '../informacion/registro.txt', 'a') 
+    aux.write( str(information) + "\n")
+    aux.close()
         
 bot.polling(none_stop=True) 
 # Comprobamos si existe el horario y se actua en consecuencia
