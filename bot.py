@@ -3,7 +3,6 @@ from telebot import types
 import time 
 import urllib2, cookielib, os.path
 
-TOKEN = '130984576:AAFDhHdC8kalZzbktH-wZMLp0txRYHyyvio'
 
 
 bot = telebot.TeleBot(TOKEN) # Creamos el objeto de nuestro bot.
@@ -74,6 +73,7 @@ def mandar_horario(grado,m):
             
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
+
 
 #Horario grado ingenieria informatica
     
