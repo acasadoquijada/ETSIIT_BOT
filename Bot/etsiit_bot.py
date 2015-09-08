@@ -179,5 +179,22 @@ def obtener_examenes(m):
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
         exception_log(e,m)
 
+
+# Envia localizacion
+@bot.message_handler(commands=['localizacion'])
+def obtener_localizacion(m):
+
+    try:
+        log(m)
+
+        cid = m.chat.id
+        
+        bot.send_location(cid,37.196689,-3.624534)
+    except Exception as e:
+        bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
+        exception_log(e,m)
+        
+
+
 while True: 
     time.sleep(300)
