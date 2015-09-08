@@ -122,7 +122,7 @@ def start(m):
     
     cid = m.chat.id
 
-    mensaje = "¡Hola!\n\nSoy el bot de la E.T.S.I.I.T de Granada" \
+    mensaje = "¡Hola!\n\nSoy el bot no oficial de la E.T.S.I.I.T de Granada" \
     ", estoy aqui para proporcionarte informacion sobre ella, como horarios, examenes..\n" \
     "Actualmente estoy en construccion, si echas en falta alguna funcionalidad puedes " \
     "enviarnos una sugerencia o, ¡incorporarla tu mismo!\n\n" \
