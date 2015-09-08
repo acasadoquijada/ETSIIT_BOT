@@ -124,7 +124,7 @@ def start(m):
 
     mensaje = "¡Hola!\n\nSoy el bot de la E.T.S.I.I.T de Granada" \
     ", estoy aqui para proporcionarte informacion sobre ella, como horarios, examenes..\n" \
-    "Actualmente estoy en construccion, si echas en falta alguna funcionalidad puedes" \
+    "Actualmente estoy en construccion, si echas en falta alguna funcionalidad puedes " \
     "enviarnos una sugerencia o, ¡incorporarla tu mismo!\n\n" \
     "Contacto: acasadoquijada@gmail.com\n" \
     "Repositorio: https://github.com/acasadoquijada/ETSIIT_BOT\n"
@@ -148,8 +148,36 @@ def obtener_horario_git(m):
 @bot.message_handler(commands=['horario_gim'])
 def obtener_horario_gim(m):
     mandar_horario('matematicas',m)
-    
 
+# Examenes    
+@bot.message_handler(commands=['examenes'])
+def obtener_examenes(m):
+    try:
+        if os.path.isfile('../examenes/examenes.pdf'):
+            bot.send_document(m.chat.id, open( '../examense/examenes.pdf', 'rb'))
+        
+        else:
+            url = 'http://etsiit.ugr.es/pages/calendario_academico/calendarioexamenes1516/!'
+            cj = cookielib.CookieJar()
+        
+            opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
+            
+            request = urllib2.Request(url)
+            
+            f = opener.open(request)
+            data = f.read()
+            f.close()
+            opener.close()
+            
+            FILE = open('../examenes/examenes.pdf', "wb+")
+            FILE.write(data)
+            FILE.close()
+            
+            bot.send_document(m.chat.id, open( '../examenes/examenes.pdf', 'rb'))
+            
+    except Exception as e:
+        bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
+        exception_log(e,m)
 
 while True: 
     time.sleep(300)
