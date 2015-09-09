@@ -15,8 +15,7 @@ bot = telebot.TeleBot(token) # Creamos el objeto de nuestro bot.
 
 def listener(messages): 
     for m in messages: 
-        cid = m.chat.id 
-        print "[" + str(cid) + "]: " + m.text 
+        user_id = m.from_user.id
 
 bot.set_update_listener(listener) 
 
@@ -108,6 +107,8 @@ def mandar_horario(grado,m):
 @bot.message_handler(commands=['contacto'])
 def contacto(m):
     
+    log(m)
+    
     cid = m.chat.id
 
     mensaje = "¡Hola!\n\nAqui tienes información sobre nosotros:\n\n" \
@@ -120,6 +121,8 @@ def contacto(m):
 @bot.message_handler(commands=['start'])
 def start(m):
     
+    log(m)
+    
     cid = m.chat.id
 
     mensaje = "¡Hola!\n\nSoy el bot no oficial de la E.T.S.I.I.T de Granada" \
@@ -129,7 +132,27 @@ def start(m):
     "Contacto: acasadoquijada@gmail.com\n" \
     "Repositorio: https://github.com/acasadoquijada/ETSIIT_BOT\n"
     bot.send_message(cid,mensaje)
+
+
+#Ayuda
+
+@bot.message_handler(commands=['ayuda'])
+def ayuda(m):
     
+    log(m)
+    
+    cid = m.chat.id
+    
+    mensaje = "¡Hola!\n\nEstas son las funciones de las que dispongo:\n\n"\
+    "/horario_gii - Horario 2015/2016 para ingeniería informática.\n" \
+    "/horario_git - Horario 2015/2016 para ingeniería en telecomunicaciones.\n"\
+    "/horario_gim - Horario 2015/2016 para doble grado informática matemáticas.\n"\
+    "/examenes - Examenes del curso 2015/2016 para todos los grados.\n"\
+    "/localizacion - Localizacion de la escuela en google maps.\n"\
+    "/contacto - Información de contacto de los desarrolladores.\n"\
+    
+    bot.send_message(cid,mensaje)
+
 #Horario grado ingenieria informatica
     
 @bot.message_handler(commands=['horario_gii'])
@@ -154,7 +177,7 @@ def obtener_horario_gim(m):
 def obtener_examenes(m):
     try:
         if os.path.isfile('../examenes/examenes.pdf'):
-            bot.send_document(m.chat.id, open( '../examense/examenes.pdf', 'rb'))
+            bot.send_document(m.chat.id, open( '../examenes/examenes.pdf', 'rb'))
         
         else:
             url = 'http://etsiit.ugr.es/pages/calendario_academico/calendarioexamenes1516/!'
@@ -190,6 +213,21 @@ def obtener_localizacion(m):
         cid = m.chat.id
         
         bot.send_location(cid,37.196689,-3.624534)
+    except Exception as e:
+        bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
+        exception_log(e,m)
+        
+# Envia localizacion
+@bot.message_handler(commands=['web'])
+def obtener_web(m):
+
+    try:
+        log(m)
+
+        cid = m.chat.id
+        mensaje = 'Aquí tienes la web de la ETSIIT: '
+        
+        bot.send_message(cid,mensaje + 'http://etsiit.ugr.es/')
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
         exception_log(e,m)
