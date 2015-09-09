@@ -76,6 +76,8 @@ def mandar_horario(grado,m):
            nombre_fichero += 'm.pdf'
         
         if os.path.isfile(path + nombre_fichero):
+            bot.send_chat_action(m.chat.id,'upload_document')
+
             bot.send_document(m.chat.id, open( path + nombre_fichero, 'rb'))
         
         else:
@@ -94,6 +96,8 @@ def mandar_horario(grado,m):
             FILE = open(path + nombre_fichero, "wb+")
             FILE.write(data)
             FILE.close()
+
+            bot.send_chat_action(m.chat.id,'upload_document')
             
             bot.send_document(m.chat.id, open( path + nombre_fichero, 'rb'))
             
@@ -177,6 +181,8 @@ def obtener_horario_gim(m):
 def obtener_examenes(m):
     try:
         if os.path.isfile('../examenes/examenes.pdf'):
+            bot.send_chat_action(m.chat.id,'upload_document')
+
             bot.send_document(m.chat.id, open( '../examenes/examenes.pdf', 'rb'))
         
         else:
