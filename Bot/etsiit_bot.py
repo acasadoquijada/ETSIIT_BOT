@@ -13,10 +13,10 @@ sys.setdefaultencoding("utf-8")
 
 bot = telebot.TeleBot(token) # Creamos el objeto de nuestro bot.
 
-def listener(messages): 
+def listener(messages):
     for m in messages: 
         user_id = m.from_user.id
-
+        
 bot.set_update_listener(listener) 
 
 #Registro de actividad
@@ -223,7 +223,7 @@ def obtener_localizacion(m):
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
         exception_log(e,m)
         
-# Envia localizacion
+# Envia web
 @bot.message_handler(commands=['web'])
 def obtener_web(m):
 
