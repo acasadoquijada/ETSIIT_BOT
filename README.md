@@ -13,6 +13,7 @@ La idea de este bot es proporcionar información sobre la escuela de manera simp
 * /examenes => Proporciona los examenes del curso 2015/2016 para todos los grados.
 * /localizacion => Localización de la escuela en google maps.
 * /contacto => Información de contacto de los desarrolladores.
+* /web => Web de la escuela
 * /ayuda => Información detallada sobre las funciones.
 
 
