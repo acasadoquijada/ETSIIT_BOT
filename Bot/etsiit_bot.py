@@ -115,9 +115,9 @@ def contacto(m):
     
     cid = m.chat.id
 
-    mensaje = "Información de contacto:\n\n" \
-    "Tfno: +34-958242802\n" \
-    "Fax: +34-958242801\n" \
+    mensaje = "Información de contacto de la escuela:\n\n" \
+    "Teléfono: +34 958242802\n" \
+    "Fax: +34 958242801\n" \
 
     bot.send_message(cid,mensaje)    
     
