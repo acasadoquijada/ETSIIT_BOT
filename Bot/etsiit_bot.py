@@ -154,7 +154,7 @@ def ayuda(m):
     "/horario_gim - Horario 2015/2016 para doble grado informática matemáticas.\n"\
     "/examenes - Examenes del curso 2015/2016 para todos los grados.\n"\
     "/localizacion - Localizacion de la escuela en google maps.\n"\
-    "/contacto - Información de contacto de los desarrolladores.\n"\
+    "/contacto - Información de contacto de los desarrolladores.\n\n"\
     "Contacto: acasadoquijada@gmail.com\n" \
     "Repositorio: https://github.com/acasadoquijada/ETSIIT_BOT\n"
     
