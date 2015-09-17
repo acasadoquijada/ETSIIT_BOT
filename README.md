@@ -1,7 +1,7 @@
 # ETSIIT_BOT
 Bot de telegram sobre la ETSIIT de la universidad de Granada
 
-Por una serie de problemas con el host, el bot no se encuentra disponible
+Por una serie de problemas con el host, el bot puede no estar disponible
 
 Nombre del bot: @ETSIITBOT
 
