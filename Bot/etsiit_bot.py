@@ -115,9 +115,10 @@ def contacto(m):
     
     cid = m.chat.id
 
-    mensaje = "¡Hola!\n\nAqui tienes información sobre nosotros:\n\n" \
-    "Contacto: acasadoquijada@gmail.com\n" \
-    "Repositorio: https://github.com/acasadoquijada/ETSIIT_BOT\n"
+    mensaje = "Información de contacto:\n\n" \
+    "Tfno: +34-958242802\n" \
+    "Fax: +34-958242801\n" \
+
     bot.send_message(cid,mensaje)    
     
 # Funcion start
@@ -154,6 +155,8 @@ def ayuda(m):
     "/examenes - Examenes del curso 2015/2016 para todos los grados.\n"\
     "/localizacion - Localizacion de la escuela en google maps.\n"\
     "/contacto - Información de contacto de los desarrolladores.\n"\
+    "Contacto: acasadoquijada@gmail.com\n" \
+    "Repositorio: https://github.com/acasadoquijada/ETSIIT_BOT\n"
     
     bot.send_message(cid,mensaje)
 
