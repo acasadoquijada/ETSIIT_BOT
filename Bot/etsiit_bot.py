@@ -19,6 +19,47 @@ def listener(messages):
         
 bot.set_update_listener(listener) 
 
+# Funcion start
+
+@bot.message_handler(commands=['start'])
+def start(m):
+    
+    log(m)
+    
+    cid = m.chat.id
+
+    mensaje = "¡Hola!\n\nSoy el bot no oficial de la E.T.S.I.I.T de Granada" \
+    ", estoy aqui para proporcionarte informacion sobre ella, como horarios, examenes..\n" \
+    "Actualmente estoy en construccion, si echas en falta alguna funcionalidad puedes " \
+    "enviarnos una sugerencia o, ¡incorporarla tu mismo!\n\n" \
+    "Contacto: acasadoquijada@gmail.com\n" \
+    "Repositorio: https://github.com/acasadoquijada/ETSIIT_BOT\n"
+    bot.send_message(cid,mensaje)
+    
+#Ayuda
+
+@bot.message_handler(commands=['ayuda'])
+def ayuda(m):
+    
+    log(m)
+    
+    cid = m.chat.id
+    
+    mensaje = "¡Hola!\n\nEstas son las funciones de las que dispongo:\n\n"\
+    "/horario_gii - Horario 2015/2016 para ingeniería informática.\n" \
+    "/horario_git - Horario 2015/2016 para ingeniería en telecomunicaciones.\n"\
+    "/horario_gim - Horario 2015/2016 para doble grado informática matemáticas.\n"\
+    "/examenes - Examenes del curso 2015/2016 para todos los grados.\n"\
+    "/examenes_gii - Exámenes grado ingeniería informática del curso 2015/2016.\n"\
+    "/examenes_gitt - Exámenes grado ingeniería telecomunicaciones del curso 2015/2016.\n"\
+    "/localizacion - Localizacion de la escuela en google maps.\n"\
+    "/contacto - Información de contacto de los desarrolladores.\n\n"\
+    "Contacto: acasadoquijada@gmail.com\n" \
+    "Repositorio: https://github.com/acasadoquijada/ETSIIT_BOT\n"
+    
+    bot.send_message(cid,mensaje)
+
+
 #Registro de actividad
 def log(m):
     user_id = m.from_user.id
@@ -106,6 +147,35 @@ def mandar_horario(grado,m):
         exception_log(e,m)
 
 
+# Comprobamos si existe el horario y se actua en consecuencia
+def mandar_examenes(grado,m):
+    
+    try:
+        log(m)
+        path = '../examenes/'
+        nombre_fichero = ''
+
+        
+        if grado == 'informatica':
+            nombre_fichero += 'examenes_gii.pdf'
+
+        elif grado == 'teleco':
+            nombre_fichero += 'examenes_gitt.pdf'
+
+
+        if os.path.isfile(path + nombre_fichero):
+            bot.send_chat_action(m.chat.id,'upload_document')
+
+            bot.send_document(m.chat.id, open( path + nombre_fichero, 'rb'))
+        
+        else:
+            bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
+
+            
+    except Exception as e:
+        bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
+        exception_log(e,m)
+
 # Contacto
 
 @bot.message_handler(commands=['contacto'])
@@ -121,45 +191,23 @@ def contacto(m):
 
     bot.send_message(cid,mensaje)    
     
-# Funcion start
-
-@bot.message_handler(commands=['start'])
-def start(m):
-    
-    log(m)
-    
-    cid = m.chat.id
-
-    mensaje = "¡Hola!\n\nSoy el bot no oficial de la E.T.S.I.I.T de Granada" \
-    ", estoy aqui para proporcionarte informacion sobre ella, como horarios, examenes..\n" \
-    "Actualmente estoy en construccion, si echas en falta alguna funcionalidad puedes " \
-    "enviarnos una sugerencia o, ¡incorporarla tu mismo!\n\n" \
-    "Contacto: acasadoquijada@gmail.com\n" \
-    "Repositorio: https://github.com/acasadoquijada/ETSIIT_BOT\n"
-    bot.send_message(cid,mensaje)
 
 
-#Ayuda
 
-@bot.message_handler(commands=['ayuda'])
-def ayuda(m):
-    
-    log(m)
-    
-    cid = m.chat.id
-    
-    mensaje = "¡Hola!\n\nEstas son las funciones de las que dispongo:\n\n"\
-    "/horario_gii - Horario 2015/2016 para ingeniería informática.\n" \
-    "/horario_git - Horario 2015/2016 para ingeniería en telecomunicaciones.\n"\
-    "/horario_gim - Horario 2015/2016 para doble grado informática matemáticas.\n"\
-    "/examenes - Examenes del curso 2015/2016 para todos los grados.\n"\
-    "/localizacion - Localizacion de la escuela en google maps.\n"\
-    "/contacto - Información de contacto de los desarrolladores.\n\n"\
-    "Contacto: acasadoquijada@gmail.com\n" \
-    "Repositorio: https://github.com/acasadoquijada/ETSIIT_BOT\n"
-    
-    bot.send_message(cid,mensaje)
 
+#Examenes grado ingenieria informatica
+    
+@bot.message_handler(commands=['examenes_gii'])
+def obtener_examenes_gii(m):
+    mandar_examenes('informatica',m)
+    
+#Examenes grado ingenieria informatica
+    
+@bot.message_handler(commands=['examenes_gitt'])
+def obtener_examenes_gitt(m):
+    mandar_examenes('teleco',m)
+    
+    
 #Horario grado ingenieria informatica
     
 @bot.message_handler(commands=['horario_gii'])
