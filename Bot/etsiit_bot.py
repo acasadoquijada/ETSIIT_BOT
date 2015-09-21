@@ -210,8 +210,8 @@ def obtener_horario_gii(m):
 
 #Horario grado ingenieria telecomunicaciones
 
-@bot.message_handler(commands=['horario_git'])
-def obtener_horario_git(m):
+@bot.message_handler(commands=['horario_gitt'])
+def obtener_horario_gitt(m):
     mandar_horario('teleco',m)
         
 #Horario grado ingenieria inf+mates
