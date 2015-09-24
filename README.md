@@ -18,6 +18,7 @@ La idea de este bot es proporcionar información sobre la escuela de manera simp
 * /localizacion => Localización de la escuela en google maps.
 * /contacto => Información de contacto de la escuela.
 * /web => Web de la escuela
+* /menu => Menú de la semada de los comedores de la ugr
 * /ayuda => Información detallada sobre las funciones.
 
 

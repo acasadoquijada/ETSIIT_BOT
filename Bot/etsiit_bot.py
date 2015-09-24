@@ -2,6 +2,12 @@
 
 import telebot 
 from telebot import types 
+from lxml import html
+from bs4 import BeautifulSoup
+
+import string
+import requests
+import re
 import urllib2, cookielib, os.path, time, sys
 
 sys.path.append('../informacion/')
@@ -223,6 +229,8 @@ def obtener_horario_gim(m):
 # Examenes    
 @bot.message_handler(commands=['examenes'])
 def obtener_examenes(m):
+    
+    log(m)
     try:
         if os.path.isfile('../examenes/examenes.pdf'):
             bot.send_chat_action(m.chat.id,'upload_document')
@@ -267,6 +275,7 @@ def obtener_localizacion(m):
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
         exception_log(e,m)
         
+        
 # Envia web
 @bot.message_handler(commands=['web'])
 def obtener_web(m):
@@ -283,6 +292,99 @@ def obtener_web(m):
         exception_log(e,m)
         
 
+
+   
+#Limpiamos la fecha 
+def limpiar_fecha(aux):
+    
+    fecha_limpia = ""
+    
+    fecha_limpia = re.sub('<div class="numero">', '',aux)
+    
+    fecha_limpia = re.sub('</div>', '',fecha_limpia)
+    
+    fecha_limpia = re.sub('\s+',' ',fecha_limpia)
+    
+    return fecha_limpia
+    
+#Limpiamos plato   
+def limpiar_plato(aux):
+    
+    plato_limpio = ""
+    plato_limpio = re.sub('<br/>', ' ',aux)
+    plato_limpio = re.sub('\s+',' ',plato_limpio)
+    
+    return plato_limpio
+
+#Obtiene y envia menú
+@bot.message_handler(commands=['menu'])
+def menu(m):
+
+    cid = m.chat.id
+    
+    r  = requests.get("http://comedoresugr.tcomunica.org/")
+    
+    data = r.text
+    
+    soup = BeautifulSoup(data,"lxml")
+    
+    result = soup.find_all('div', id='plato')
+    
+    info_dias = []
+    
+    for x in result:
+        info_dias.append(str(x))
+
+    
+    
+    mensaje = "¡Hola!\nAquí tienes el menú de la semana, ¡Buen provecho! \n\n"
+    
+    for dia in info_dias:  
+        
+     
+        aux = BeautifulSoup(dia,"lxml")
+        
+        #Obtenemos la fecha
+        fecha = aux.find('div', id='fechaplato')     # TODA LA INFORMACION SOBRE EL DIA DEL PLATO
+        
+        fecha = ''.join(map(str, fecha.contents))
+        
+        fecha = limpiar_fecha(fecha)
+        
+        
+        mensaje += fecha + "\n"
+        
+
+        #Obtenemos el primer plato
+        plato1 = aux.find('div', id='plato1')
+        
+        plato1 = ''.join(map(str, plato1.contents))
+
+        plato1 = limpiar_plato(plato1)
+        
+        mensaje += plato1 + "\n"
+
+        #Obtenemos el segundo plato
+        plato2 = aux.find('div', id='plato2')
+        
+        plato2 = ''.join(map(str, plato2.contents))
+
+        plato2 = limpiar_plato(plato2)
+        
+        mensaje += plato2 + "\n"
+
+
+        #Obtenemos el tercer plato
+        plato3= aux.find('div', id='plato3')
+        
+        plato3 = ''.join(map(str, plato3.contents))
+
+        plato3 = limpiar_plato(plato3)
+        
+        mensaje += plato3 + "\n\n"
+
+
+    bot.send_message(cid,mensaje)
 
 while True: 
     time.sleep(300)
