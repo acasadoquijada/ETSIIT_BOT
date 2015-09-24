@@ -9,6 +9,7 @@ import string
 import requests
 import re
 import urllib2, cookielib, os.path, time, sys
+import chardet
 
 sys.path.append('../informacion/')
 from conf import token
@@ -323,9 +324,9 @@ def menu(m):
     cid = m.chat.id
     
     r  = requests.get("http://comedoresugr.tcomunica.org/")
-    
+
     data = r.text
-    
+
     soup = BeautifulSoup(data,"lxml")
     
     result = soup.find_all('div', id='plato')
@@ -335,9 +336,7 @@ def menu(m):
     for x in result:
         info_dias.append(str(x))
 
-    
-    
-    mensaje = "¡Hola!\nAquí tienes el menú de la semana, ¡Buen provecho! \n\n"
+    mensaje = "¡Hola!\n\nAquí tienes el menú de la semana, ¡Buen provecho! \n\n"
     
     for dia in info_dias:  
         
@@ -351,8 +350,7 @@ def menu(m):
         
         fecha = limpiar_fecha(fecha)
         
-        
-        mensaje += fecha + "\n"
+        mensaje += fecha + "\n\n"
         
 
         #Obtenemos el primer plato
@@ -384,6 +382,7 @@ def menu(m):
         mensaje += plato3 + "\n\n"
 
 
+    mensaje += "Precio por menú: 3,5€"
     bot.send_message(cid,mensaje)
 
 while True: 
