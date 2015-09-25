@@ -26,12 +26,6 @@ sin necesidad de / te responderá indicando como obtener lo que buscas
 * /menu => Menú de la semada de los comedores de la ugr
 * /ayuda => Información detallada sobre las funciones.
 
-
-
-##Colaboradores
-
-* [Jesus Sánchez de Castro](https://github.com/Yissoft) diseñador del logo
-
 ##Contacto
 acasadoquijada@gmail.com
 
