@@ -9,6 +9,11 @@ La idea de este bot es proporcionar información sobre la escuela de manera simp
 
 ##Funcionalidades
 
+ETSIITBOT ahora es un poquito mas inteligente, al detectar la palabra horario y/o exámenes en el mensaje
+sin necesidad de / te responderá indicando como obtener lo que buscas
+
+![Captura1](informacion/pasiva.png)
+
 * /horario_gii => Horario del curso 2015/2016 para el grado de ingeniería informática.
 * /horario_gitt => Horario del curso 2015/2016 para el grado de ingeniería en telecomunicaciones.
 * /horario_gim => Horario del curso 2015/2016 para el doble grado informática matemáticas.
@@ -20,6 +25,7 @@ La idea de este bot es proporcionar información sobre la escuela de manera simp
 * /web => Web de la escuela
 * /menu => Menú de la semada de los comedores de la ugr
 * /ayuda => Información detallada sobre las funciones.
+
 
 
 ##Colaboradores
