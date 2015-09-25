@@ -22,10 +22,36 @@ bot = telebot.TeleBot(token) # Creamos el objeto de nuestro bot.
 
 def listener(messages):
     for m in messages: 
-        user_id = m.from_user.id
+        ayuda_pasiva(m)
         
 bot.set_update_listener(listener) 
 
+
+#Ayuda pasiva para obtener el horario y/o examenes
+def ayuda_pasiva(m):
+    
+    try:
+        log(m)
+        mensaje = ""
+        
+        if "horario" in m.text.lower():
+            mensaje = "¡Hola " + m.from_user.first_name +"!\n\nCreo que buscas los horarios, usa esto:\n\n"\
+            "/horario_gii - Horario 2015/2016 para ingeniería informática.\n\n"\
+            "/horario_git - Horario 2015/2016 para ingeniería en telecomunicaciones.\n\n"\
+            "/horario_gim - Horario 2015/2016 para doble grado informática matemáticas.\n\n"
+            
+            bot.reply_to(m,mensaje)
+        
+        if "examenes" in m.text.lower() or "exámenes" in m.text.lower() :
+            mensaje = "¡Hola " + m.from_user.first_name +"!\n\nCreo que buscas los exámenes, usa esto:\n\n"\
+            "/examenes - Examenes del curso 2015/2016 para todos los grados.\n\n"\
+            "/examenes_gii - Exámenes grado ingeniería informática del curso 2015/2016.\n\n"\
+            "/examenes_gitt - Exámenes grado ingeniería telecomunicaciones del curso 2015/2016.\n\n"
+            bot.reply_to(m,mensaje)
+        
+    except Exception as e:
+        exception_log(e,m)
+        
 # Funcion start
 
 @bot.message_handler(commands=['start'])
@@ -321,69 +347,77 @@ def limpiar_plato(aux):
 @bot.message_handler(commands=['menu'])
 def menu(m):
 
-    cid = m.chat.id
+    try:
+        
+        log(m)
+
+        cid = m.chat.id
+        
+        r  = requests.get("http://comedoresugr.tcomunica.org/")
     
-    r  = requests.get("http://comedoresugr.tcomunica.org/")
-
-    data = r.text
-
-    soup = BeautifulSoup(data,"lxml")
+        data = r.text
     
-    result = soup.find_all('div', id='plato')
+        soup = BeautifulSoup(data,"lxml")
+        
+        result = soup.find_all('div', id='plato')
+        
+        info_dias = []
+        
+        for x in result:
+            info_dias.append(str(x))
     
-    info_dias = []
+        mensaje = "¡Hola!\n\nAquí tienes el menú de la semana, ¡Buen provecho! \n\n"
+        
+        for dia in info_dias:  
+            
+         
+            aux = BeautifulSoup(dia,"lxml")
+            
+            #Obtenemos la fecha
+            fecha = aux.find('div', id='fechaplato')     # TODA LA INFORMACION SOBRE EL DIA DEL PLATO
+            
+            fecha = ''.join(map(str, fecha.contents))
+            
+            fecha = limpiar_fecha(fecha)
+            
+            mensaje += fecha + "\n\n"
+            
     
-    for x in result:
-        info_dias.append(str(x))
-
-    mensaje = "¡Hola!\n\nAquí tienes el menú de la semana, ¡Buen provecho! \n\n"
+            #Obtenemos el primer plato
+            plato1 = aux.find('div', id='plato1')
+            
+            plato1 = ''.join(map(str, plato1.contents))
     
-    for dia in info_dias:  
-        
-     
-        aux = BeautifulSoup(dia,"lxml")
-        
-        #Obtenemos la fecha
-        fecha = aux.find('div', id='fechaplato')     # TODA LA INFORMACION SOBRE EL DIA DEL PLATO
-        
-        fecha = ''.join(map(str, fecha.contents))
-        
-        fecha = limpiar_fecha(fecha)
-        
-        mensaje += fecha + "\n\n"
-        
-
-        #Obtenemos el primer plato
-        plato1 = aux.find('div', id='plato1')
-        
-        plato1 = ''.join(map(str, plato1.contents))
-
-        plato1 = limpiar_plato(plato1)
-        
-        mensaje += plato1 + "\n"
-
-        #Obtenemos el segundo plato
-        plato2 = aux.find('div', id='plato2')
-        
-        plato2 = ''.join(map(str, plato2.contents))
-
-        plato2 = limpiar_plato(plato2)
-        
-        mensaje += plato2 + "\n"
-
-
-        #Obtenemos el tercer plato
-        plato3= aux.find('div', id='plato3')
-        
-        plato3 = ''.join(map(str, plato3.contents))
-
-        plato3 = limpiar_plato(plato3)
-        
-        mensaje += plato3 + "\n\n"
-
-
-    mensaje += "Precio por menú: 3,5€"
-    bot.send_message(cid,mensaje)
+            plato1 = limpiar_plato(plato1)
+            
+            mensaje += plato1 + "\n"
+    
+            #Obtenemos el segundo plato
+            plato2 = aux.find('div', id='plato2')
+            
+            plato2 = ''.join(map(str, plato2.contents))
+    
+            plato2 = limpiar_plato(plato2)
+            
+            mensaje += plato2 + "\n"
+    
+    
+            #Obtenemos el tercer plato
+            plato3= aux.find('div', id='plato3')
+            
+            plato3 = ''.join(map(str, plato3.contents))
+    
+            plato3 = limpiar_plato(plato3)
+            
+            mensaje += plato3 + "\n\n"
+    
+    
+        mensaje += "Precio por menú: 3,5€"
+        bot.send_message(cid,mensaje)
+    
+    except Exception as e:
+        bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
+        exception_log(e,m)
 
 while True: 
     time.sleep(300)

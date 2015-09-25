@@ -12,7 +12,7 @@ La idea de este bot es proporcionar información sobre la escuela de manera simp
 ETSIITBOT ahora es un poquito mas inteligente, al detectar la palabra horario y/o exámenes en el mensaje
 sin necesidad de / te responderá indicando como obtener lo que buscas
 
-![Captura1](informacion/pasiva.png)
+![Captura1](Imagenes/pasiva.png)
 
 * /horario_gii => Horario del curso 2015/2016 para el grado de ingeniería informática.
 * /horario_gitt => Horario del curso 2015/2016 para el grado de ingeniería en telecomunicaciones.
