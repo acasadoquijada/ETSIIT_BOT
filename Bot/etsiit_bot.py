@@ -33,20 +33,14 @@ def ayuda_pasiva(m):
     try:
         log(m)
         mensaje = ""
-        
-        if "horario" in m.text.lower():
-            mensaje = "¡Hola " + m.from_user.first_name +"!\n\nCreo que buscas los horarios, usa esto:\n\n"\
-            "/horario_gii - Horario 2015/2016 para ingeniería informática.\n\n"\
-            "/horario_git - Horario 2015/2016 para ingeniería en telecomunicaciones.\n\n"\
-            "/horario_gim - Horario 2015/2016 para doble grado informática matemáticas.\n\n"
             
+        #m.text[0] != "/" evita que la ayuda pasiva se active al user /horario_gii
+        if "horario" in m.text.lower() and m.text[0] != "/":
+            mensaje = open('../informacion/ayuda_pasiva_horario.txt', 'r').read()
             bot.reply_to(m,mensaje)
         
-        if "examenes" in m.text.lower() or "exámenes" in m.text.lower() :
-            mensaje = "¡Hola " + m.from_user.first_name +"!\n\nCreo que buscas los exámenes, usa esto:\n\n"\
-            "/examenes - Examenes del curso 2015/2016 para todos los grados.\n\n"\
-            "/examenes_gii - Exámenes grado ingeniería informática del curso 2015/2016.\n\n"\
-            "/examenes_gitt - Exámenes grado ingeniería telecomunicaciones del curso 2015/2016.\n\n"
+        if ("examenes" in m.text.lower() or "exámenes" in m.text.lower()) and m.text[0] != "/" :
+            mensaje = open('../informacion/ayuda_pasiva_examenes.txt', 'r').read()
             bot.reply_to(m,mensaje)
         
     except Exception as e:
@@ -68,8 +62,8 @@ def start(m):
     except Exception as e:
         exception_log(e,m)
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
+        
 #Ayuda
-
 @bot.message_handler(commands=['ayuda'])
 def ayuda(m):
     
