@@ -22,7 +22,7 @@ bot = telebot.TeleBot(token) # Creamos el objeto de nuestro bot.
 
 hideBoard = types.ReplyKeyboardHide()
 
-rateSelect = types.ReplyKeyboardMarkup(one_time_keyboard=True,resize_keyboard=True,)
+rateSelect = types.ReplyKeyboardMarkup(one_time_keyboard=True,resize_keyboard=True,selective=True)
 rateSelect.add('Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado')
 
 
@@ -121,6 +121,17 @@ def exception_log(e,m):
     
 bot.polling(none_stop=True) 
 
+#Funcion encarga de enviar el archivo al chat del mensaje
+
+def enviar_archivo(m,archivo):
+    
+    fo = open(archivo, 'rb')
+    
+    bot.send_chat_action(m.chat.id,'upload_document')
+
+    bot.send_document(m.chat.id, fo)
+
+    fo.close()    
 
 # Comprobamos si existe el horario y se actua en consecuencia
 def mandar_horario(grado,m):
@@ -144,9 +155,9 @@ def mandar_horario(grado,m):
            nombre_fichero += 'm.pdf'
         
         if os.path.isfile(path + nombre_fichero):
-            bot.send_chat_action(m.chat.id,'upload_document')
-
-            bot.send_document(m.chat.id, open( path + nombre_fichero, 'rb'))
+    
+            enviar_archivo(m,path + nombre_fichero)
+            
         
         else:
             url = 'http://etsiit.ugr.es/pages/calendario_academico/horarios1516/' + descriptor
@@ -165,9 +176,7 @@ def mandar_horario(grado,m):
             FILE.write(data)
             FILE.close()
 
-            bot.send_chat_action(m.chat.id,'upload_document')
-            
-            bot.send_document(m.chat.id, open( path + nombre_fichero, 'rb'))
+            enviar_archivo(m,path + nombre_fichero)
             
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
@@ -191,10 +200,9 @@ def mandar_examenes(grado,m):
 
 
         if os.path.isfile(path + nombre_fichero):
-            bot.send_chat_action(m.chat.id,'upload_document')
 
-            bot.send_document(m.chat.id, open( path + nombre_fichero, 'rb'))
-        
+            enviar_archivo(m,path+nombre_fichero)
+
         else:
             bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
 
@@ -261,10 +269,9 @@ def obtener_examenes(m):
     log(m)
     try:
         if os.path.isfile('../examenes/examenes.pdf'):
-            bot.send_chat_action(m.chat.id,'upload_document')
 
-            bot.send_document(m.chat.id, open( '../examenes/examenes.pdf', 'rb'))
-        
+            enviar_archivo(m,'../examenes/examenes.pdf')
+
         else:
             url = 'http://etsiit.ugr.es/pages/calendario_academico/calendarioexamenes1516/!'
             cj = cookielib.CookieJar()
@@ -282,7 +289,7 @@ def obtener_examenes(m):
             FILE.write(data)
             FILE.close()
             
-            bot.send_document(m.chat.id, open( '../examenes/examenes.pdf', 'rb'))
+            enviar_archivo(m,'../examenes/examenes.pdf')
             
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
@@ -315,6 +322,7 @@ def obtener_web(m):
         mensaje = 'Aquí tienes la web de la ETSIIT: '
         
         bot.send_message(cid,mensaje + 'http://etsiit.ugr.es/')
+
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
         exception_log(e,m)
@@ -363,6 +371,51 @@ def obtener_menu():
         menu_semana.append(str(x))
 
     return menu_semana
+
+#Devuelve el menu de un dia concreto
+def obtener_menu_dia(dia):
+    
+    mensaje = ""
+    
+    #Obtenemos la fecha
+    fecha = dia.find('div', id='fechaplato')     # TODA LA INFORMACION SOBRE EL DIA DEL PLATO
+    
+    fecha = ''.join(map(str, fecha.contents))
+    
+    fecha = limpiar_fecha(fecha)
+    
+    mensaje += fecha + "\n\n"
+    
+
+    #Obtenemos el primer plato
+    plato1 = dia.find('div', id='plato1')
+    
+    plato1 = ''.join(map(str, plato1.contents))
+
+    plato1 = limpiar_plato(plato1)
+    
+    mensaje += plato1 + "\n"
+
+    #Obtenemos el segundo plato
+    plato2 = dia.find('div', id='plato2')
+    
+    plato2 = ''.join(map(str, plato2.contents))
+
+    plato2 = limpiar_plato(plato2)
+    
+    mensaje += plato2 + "\n"
+
+
+    #Obtenemos el tercer plato
+    plato3 = dia.find('div', id='plato3')
+    
+    plato3 = ''.join(map(str, plato3.contents))
+
+    plato3 = limpiar_plato(plato3)
+    
+    mensaje += plato3 + "\n\n"    
+
+    return mensaje
     
 #Obtiene y envia menú
 @bot.message_handler(commands=['menu_semana'])
@@ -380,47 +433,9 @@ def menu_semana(m):
         
         for dia in info_dias:  
             
-         
-            aux = BeautifulSoup(dia,"lxml")
+            aux = BeautifulSoup(dia,"lxml") #Sacamos la información de un dia concreto
             
-            #Obtenemos la fecha
-            fecha = aux.find('div', id='fechaplato')     # TODA LA INFORMACION SOBRE EL DIA DEL PLATO
-            
-            fecha = ''.join(map(str, fecha.contents))
-            
-            fecha = limpiar_fecha(fecha)
-            
-            mensaje += fecha + "\n\n"
-            
-    
-            #Obtenemos el primer plato
-            plato1 = aux.find('div', id='plato1')
-            
-            plato1 = ''.join(map(str, plato1.contents))
-    
-            plato1 = limpiar_plato(plato1)
-            
-            mensaje += plato1 + "\n"
-    
-            #Obtenemos el segundo plato
-            plato2 = aux.find('div', id='plato2')
-            
-            plato2 = ''.join(map(str, plato2.contents))
-    
-            plato2 = limpiar_plato(plato2)
-            
-            mensaje += plato2 + "\n"
-    
-    
-            #Obtenemos el tercer plato
-            plato3= aux.find('div', id='plato3')
-            
-            plato3 = ''.join(map(str, plato3.contents))
-    
-            plato3 = limpiar_plato(plato3)
-            
-            mensaje += plato3 + "\n\n"
-    
+            mensaje += obtener_menu_dia(aux) #Sacamos el menu de la informacion de dicho dia
     
         mensaje += "Precio por menú: 3,5€"
         bot.send_message(cid,mensaje)
@@ -460,52 +475,14 @@ def aux_menu_dia(m):
         
         dia_seleccionado = str(m.text)
         
-        
         mensaje = "¡Hola!\n\nAquí tienes el menú del " + dia_seleccionado.lower() + ", ¡Buen provecho! \n\n"
         
         info_dias = obtener_menu()
         
         aux = BeautifulSoup(info_dias[dias[dia_seleccionado]],"lxml")
-            
-        #Obtenemos la fecha
-        fecha = aux.find('div', id='fechaplato')     # TODA LA INFORMACION SOBRE EL DIA DEL PLATO
-        
-        fecha = ''.join(map(str, fecha.contents))
-        
-        fecha = limpiar_fecha(fecha)
-        
-        mensaje += fecha + "\n\n"
-        
-    
-        #Obtenemos el primer plato
-        plato1 = aux.find('div', id='plato1')
-        
-        plato1 = ''.join(map(str, plato1.contents))
-    
-        plato1 = limpiar_plato(plato1)
-        
-        mensaje += plato1 + "\n"
-    
-        #Obtenemos el segundo plato
-        plato2 = aux.find('div', id='plato2')
-        
-        plato2 = ''.join(map(str, plato2.contents))
-    
-        plato2 = limpiar_plato(plato2)
-        
-        mensaje += plato2 + "\n"
-    
-    
-        #Obtenemos el tercer plato
-        plato3= aux.find('div', id='plato3')
-        
-        plato3 = ''.join(map(str, plato3.contents))
-    
-        plato3 = limpiar_plato(plato3)
-        
-        mensaje += plato3 + "\n\n"
-        
-        
+
+        mensaje = obtener_menu_dia(aux)
+                
         mensaje += "Precio por menú: 3,5€"
 
         bot.reply_to(m, mensaje, reply_markup=hideBoard)    
