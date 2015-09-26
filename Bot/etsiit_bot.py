@@ -337,10 +337,30 @@ def limpiar_plato(aux):
     plato_limpio = re.sub('\s+',' ',plato_limpio)
     
     return plato_limpio
+    
+    
 
+#Devuelve el menú en una lista
+def obtener_menu():
+    
+    r  = requests.get("http://comedoresugr.tcomunica.org/")
+    
+    data = r.text
+    
+    soup = BeautifulSoup(data,"lxml")
+    
+    result = soup.find_all('div', id='plato')
+    
+    menu_semana = []
+    
+    for x in result:
+        menu_semana.append(str(x))
+
+    return menu_semana
+    
 #Obtiene y envia menú
 @bot.message_handler(commands=['menu_semana'])
-def menu(m):
+def menu_semana(m):
 
     try:
         
@@ -348,18 +368,7 @@ def menu(m):
 
         cid = m.chat.id
         
-        r  = requests.get("http://comedoresugr.tcomunica.org/")
-    
-        data = r.text
-    
-        soup = BeautifulSoup(data,"lxml")
-        
-        result = soup.find_all('div', id='plato')
-        
-        info_dias = []
-        
-        for x in result:
-            info_dias.append(str(x))
+        info_dias = obtener_menu()
     
         mensaje = "¡Hola!\n\nAquí tienes el menú de la semana, ¡Buen provecho! \n\n"
         
@@ -447,23 +456,11 @@ def aux_menu_dia(m):
         
         dia_seleccionado = str(m.text)
         
-        info_dias = []
         
-        mensaje = ""
+        mensaje = "¡Hola!\n\nAquí tienes el menú del " + dia_seleccionado.lower() + ", ¡Buen provecho! \n\n"
         
-        r  = requests.get("http://comedoresugr.tcomunica.org/")
+        info_dias = obtener_menu()
         
-        data = r.text
-    
-        soup = BeautifulSoup(data,"lxml")
-        
-        result = soup.find_all('div', id='plato')
-        
-        
-        for x in result:
-            info_dias.append(str(x))
-            
-                    
         aux = BeautifulSoup(info_dias[dias[dia_seleccionado]],"lxml")
             
         #Obtenemos la fecha
@@ -503,6 +500,10 @@ def aux_menu_dia(m):
         plato3 = limpiar_plato(plato3)
         
         mensaje += plato3 + "\n\n"
+        
+        
+        mensaje += "Precio por menú: 3,5€"
+
             
         bot.send_message(m.chat.id,mensaje)
     
