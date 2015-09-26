@@ -419,81 +419,96 @@ def menu(m):
 @bot.message_handler(commands=['menu_dia'])
 def menu_dia(m):
     
-
-    rateSelect = types.ReplyKeyboardMarkup(one_time_keyboard=True,resize_keyboard=True,)
-    rateSelect.add('Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado')
     
-    
-    texto = "Selecciona dia para saber el menú"
-    
-    msg = bot.send_message(6422144,texto, reply_markup=rateSelect)
-    
-    bot.register_next_step_handler(msg, aux_menu_dia)
+    try:
+        
+        log(m)
+        cid = m.chat.id
+        
+        rateSelect = types.ReplyKeyboardMarkup(one_time_keyboard=True,resize_keyboard=True,)
+        rateSelect.add('Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado')
+        
+        
+        texto = "Selecciona dia para saber el menú"
+        
+        msg = bot.send_message(cid,texto, reply_markup=rateSelect)
+        
+        bot.register_next_step_handler(msg, aux_menu_dia)
+        
+    except Exception as e:
+        bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
+        exception_log(e,m)
 
 def aux_menu_dia(m):
     
-    dias = { 'Lunes': 0, 'Martes': 1, 'Miercoles': 2,'Jueves': 3,'Viernes': 4,'Sabado': 5}
-    
-    dia_seleccionado = str(m.text)
-    
-    info_dias = []
-    
-    mensaje = ""
-    
-    r  = requests.get("http://comedoresugr.tcomunica.org/")
-    
-    data = r.text
-
-    soup = BeautifulSoup(data,"lxml")
-    
-    result = soup.find_all('div', id='plato')
-    
-    
-    for x in result:
-        info_dias.append(str(x))
+    try:
         
-                
-    aux = BeautifulSoup(info_dias[dias[dia_seleccionado]],"lxml")
+        dias = { 'Lunes': 0, 'Martes': 1, 'Miercoles': 2,'Jueves': 3,'Viernes': 4,'Sabado': 5}
         
-    #Obtenemos la fecha
-    fecha = aux.find('div', id='fechaplato')     # TODA LA INFORMACION SOBRE EL DIA DEL PLATO
-    
-    fecha = ''.join(map(str, fecha.contents))
-    
-    fecha = limpiar_fecha(fecha)
-    
-    mensaje += fecha + "\n\n"
-    
-
-    #Obtenemos el primer plato
-    plato1 = aux.find('div', id='plato1')
-    
-    plato1 = ''.join(map(str, plato1.contents))
-
-    plato1 = limpiar_plato(plato1)
-    
-    mensaje += plato1 + "\n"
-
-    #Obtenemos el segundo plato
-    plato2 = aux.find('div', id='plato2')
-    
-    plato2 = ''.join(map(str, plato2.contents))
-
-    plato2 = limpiar_plato(plato2)
-    
-    mensaje += plato2 + "\n"
-
-
-    #Obtenemos el tercer plato
-    plato3= aux.find('div', id='plato3')
-    
-    plato3 = ''.join(map(str, plato3.contents))
-
-    plato3 = limpiar_plato(plato3)
-    
-    mensaje += plato3 + "\n\n"
+        dia_seleccionado = str(m.text)
         
-    bot.send_message(m.chat.id,mensaje)
+        info_dias = []
+        
+        mensaje = ""
+        
+        r  = requests.get("http://comedoresugr.tcomunica.org/")
+        
+        data = r.text
+    
+        soup = BeautifulSoup(data,"lxml")
+        
+        result = soup.find_all('div', id='plato')
+        
+        
+        for x in result:
+            info_dias.append(str(x))
+            
+                    
+        aux = BeautifulSoup(info_dias[dias[dia_seleccionado]],"lxml")
+            
+        #Obtenemos la fecha
+        fecha = aux.find('div', id='fechaplato')     # TODA LA INFORMACION SOBRE EL DIA DEL PLATO
+        
+        fecha = ''.join(map(str, fecha.contents))
+        
+        fecha = limpiar_fecha(fecha)
+        
+        mensaje += fecha + "\n\n"
+        
+    
+        #Obtenemos el primer plato
+        plato1 = aux.find('div', id='plato1')
+        
+        plato1 = ''.join(map(str, plato1.contents))
+    
+        plato1 = limpiar_plato(plato1)
+        
+        mensaje += plato1 + "\n"
+    
+        #Obtenemos el segundo plato
+        plato2 = aux.find('div', id='plato2')
+        
+        plato2 = ''.join(map(str, plato2.contents))
+    
+        plato2 = limpiar_plato(plato2)
+        
+        mensaje += plato2 + "\n"
+    
+    
+        #Obtenemos el tercer plato
+        plato3= aux.find('div', id='plato3')
+        
+        plato3 = ''.join(map(str, plato3.contents))
+    
+        plato3 = limpiar_plato(plato3)
+        
+        mensaje += plato3 + "\n\n"
+            
+        bot.send_message(m.chat.id,mensaje)
+    
+    except Exception as e:
+        bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
+        exception_log(e,m)
     
     
     
