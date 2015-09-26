@@ -20,6 +20,12 @@ sys.setdefaultencoding("utf-8")
 
 bot = telebot.TeleBot(token) # Creamos el objeto de nuestro bot.
 
+hideBoard = types.ReplyKeyboardHide()
+
+rateSelect = types.ReplyKeyboardMarkup(one_time_keyboard=True,resize_keyboard=True,)
+rateSelect.add('Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado')
+
+
 def listener(messages):
     for m in messages: 
         ayuda_pasiva(m)
@@ -432,11 +438,8 @@ def menu_dia(m):
     try:
         
         log(m)
+        
         cid = m.chat.id
-        
-        rateSelect = types.ReplyKeyboardMarkup(one_time_keyboard=True,resize_keyboard=True,)
-        rateSelect.add('Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado')
-        
         
         texto = "Selecciona dia para saber el menú"
         
@@ -451,6 +454,7 @@ def menu_dia(m):
 def aux_menu_dia(m):
     
     try:
+        
         
         dias = { 'Lunes': 0, 'Martes': 1, 'Miercoles': 2,'Jueves': 3,'Viernes': 4,'Sabado': 5}
         
@@ -504,9 +508,8 @@ def aux_menu_dia(m):
         
         mensaje += "Precio por menú: 3,5€"
 
-            
-        bot.send_message(m.chat.id,mensaje)
-    
+        bot.reply_to(m, mensaje, reply_markup=hideBoard)    
+
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
         exception_log(e,m)
