@@ -51,7 +51,7 @@ def enviar_archivo(m,archivo):
     
     bot.send_chat_action(m.chat.id,'upload_document')
 
-    bot.send_document(m.chat.id, fo)
+    bot.send_document(m.chat.id, fo,reply_markup=hideBoard)
 
     fo.close()
     
@@ -151,17 +151,18 @@ def mandar_horario(grado,m):
         nombre_fichero = 'horarios_gi'
         descriptor = 'horariosgi'
         
-        if grado == 'informatica':
+        if grado == 'Informática':
             descriptor += 'i1516/!'
-            nombre_fichero += 'i.pdf'
+            nombre_fichero += 'i.pdf'       
             
-        elif grado == 'teleco':
+        elif grado == 'Telecomunicaciones':
             descriptor += 'tt1516/!'
             nombre_fichero += 't.pdf'
         
-        elif grado == 'matematicas':
+        elif grado == 'Informática + matemáticas':
            descriptor +=  'm1516/!'
            nombre_fichero += 'm.pdf'
+
         
         if os.path.isfile(path + nombre_fichero):
     
@@ -189,7 +190,7 @@ def mandar_horario(grado,m):
             
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
-        exception_log(e,m)
+        #exception_log(e,m)
 
 
 # Comprobamos si existe el horario y se actua en consecuencia
@@ -244,6 +245,13 @@ def aux_menu_dia(m):
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
         exception_log(e,m)
+        
+        
+# Función auxiliar usada por la función "horario"
+def aux_horario(m):
+    
+    grado = str(m.text)
+    mandar_horario(grado,m)
         
 ############
 # Listener #
@@ -384,21 +392,7 @@ def obtener_examenes_gitt(m):
     mandar_examenes('teleco',m)
     
     
-#Horario grado ingenieria informatica
-@bot.message_handler(commands=['horario_gii'])
-def obtener_horario_gii(m):
-    mandar_horario('informatica',m)
 
-
-#Horario grado ingenieria telecomunicaciones
-@bot.message_handler(commands=['horario_gitt'])
-def obtener_horario_gitt(m):
-    mandar_horario('teleco',m)
-        
-#Horario grado ingenieria inf+mates
-@bot.message_handler(commands=['horario_gim'])
-def obtener_horario_gim(m):
-    mandar_horario('matematicas',m)
 
 # Examenes    
 @bot.message_handler(commands=['examenes'])
@@ -515,7 +509,22 @@ def menu_dia(m):
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
         exception_log(e,m)
         
+# Función encargada de dar el horario    
+@bot.message_handler(commands=['horario'])
+def horario(m):
+    
+    try:
+        log(m)
+        cid = m.chat.id
+        texto = "Elige el grado"
+        msg = bot.send_message(cid,texto, reply_markup=teclado_horario)
+        bot.register_next_step_handler(msg, aux_horario)
         
+    except Exception as e:
+        bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
+        exception_log(e,m)
+    
+    
 # Evita sobrecarga de la cpu    
 while True: 
     time.sleep(300)

@@ -16,9 +16,15 @@ sin necesidad de / te responderá indicando como obtener lo que buscas
 
 ![Captura1](Imagenes/pasiva.png)
 
-* /horario_gii => Horario del curso 2015/2016 para el grado de ingeniería informática.
-* /horario_gitt => Horario del curso 2015/2016 para el grado de ingeniería en telecomunicaciones.
-* /horario_gim => Horario del curso 2015/2016 para el doble grado informática matemáticas.
+La interacción con ETSIITBOT ahora se realiza de una manera mas natural.
+
+![Captura2](Imagenes/horario1.png)
+
+Tras seleccionar el grado del que queramos el horario ETSIITBOT nos lo enviará
+
+![Captura3](Imagenes/horario2.png)
+
+* /horario - Ofrece los diferentes horarios a traves de un teclado
 * /examenes => Proporciona los examenes del curso 2015/2016 para todos los grados.
 * /examenes_gii =>Examenes del curso 2015/2016 para  el grado de ingeniería informática.
 * /examenes_gitt => Examenes del curso 2015/2016 ara el grado de ingeniería en telecomunicaciones.
