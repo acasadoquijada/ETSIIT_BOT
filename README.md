@@ -1,13 +1,14 @@
 # ETSIIT BOT
 Bot de telegram sobre la ETSIIT de la universidad de Granada
 
+La idea de este bot es proporcionar información sobre la escuela de manera simple y sencilla.
+
 Nombre del bot: @ETSIITBOT
 
 Por una serie de problemas con el host, el bot puede no estar disponible
 
 Por motivos de privacidad de los usuarios el bot no puede ser incluido en grupos.
 
-La idea de este bot es proporcionar información sobre la escuela de manera simple y sencilla.
 
 ##Funcionalidades
 
@@ -18,13 +19,15 @@ sin necesidad de / te responderá indicando como obtener lo que buscas
 
 La interacción con ETSIITBOT ahora se realiza de una manera mas natural.
 
-Esta interacción esta disponible para elegir el horario y los examenes
-
 ![Captura2](Imagenes/horario1.png)
 
 Tras seleccionar el grado del que queramos el horario ETSIITBOT nos lo enviará
 
 ![Captura3](Imagenes/horario2.png)
+
+Esta interacción esta disponible para elegir el horario, los examenes y el menú de un dia concreto
+
+##Comandos
 
 * /horario - Ofrece los diferentes horarios a traves de un teclado
 * /examenes => Proporciona los examenes del curso 2015/2016 para todos los grados.
