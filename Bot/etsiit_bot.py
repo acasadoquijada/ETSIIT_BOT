@@ -37,6 +37,10 @@ teclado_menu.add('Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado')
 teclado_horario = types.ReplyKeyboardMarkup(one_time_keyboard=True,resize_keyboard=True,selective=True)
 teclado_horario.add('Informática', 'Telecomunicaciones', 'Informática + matemáticas')
 
+# Teclado para elegir los examenes
+teclado_examenes = types.ReplyKeyboardMarkup(one_time_keyboard=True,resize_keyboard=True,selective=True)
+teclado_examenes.add('Informática', 'Telecomunicaciones', 'Todos')
+
 # Ocultamos el teclado
 hideBoard = types.ReplyKeyboardHide()
 
@@ -202,11 +206,14 @@ def mandar_examenes(grado,m):
         nombre_fichero = ''
 
         
-        if grado == 'informatica':
+        if grado == 'Informática':
             nombre_fichero += 'examenes_gii.pdf'
 
-        elif grado == 'teleco':
+        elif grado == 'Telecomunicaciones':
             nombre_fichero += 'examenes_gitt.pdf'
+            
+        elif grado == 'Todos':
+            nombre_fichero += 'examenes.pdf'
 
 
         if os.path.isfile(path + nombre_fichero):
@@ -220,6 +227,38 @@ def mandar_examenes(grado,m):
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
         exception_log(e,m)
+        
+# Comprobamos si existe los examenes y se actua en consecuencia
+def obtener_examenes(m):
+    
+    log(m)
+    try:
+        if os.path.isfile('../examenes/examenes.pdf'):
+
+            enviar_archivo(m,'../examenes/examenes.pdf')
+
+        else:
+            url = 'http://etsiit.ugr.es/pages/calendario_academico/calendarioexamenes1516/!'
+            cj = cookielib.CookieJar()
+        
+            opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
+            
+            request = urllib2.Request(url)
+            
+            f = opener.open(request)
+            data = f.read()
+            f.close()
+            opener.close()
+            
+            FILE = open('../examenes/examenes.pdf', "wb+")
+            FILE.write(data)
+            FILE.close()
+            
+            enviar_archivo(m,'../examenes/examenes.pdf')
+            
+    except Exception as e:
+        bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
+        exception_log(e,m)        
         
 #Función auxiliar usado por menu_dia
 def aux_menu_dia(m):
@@ -247,12 +286,18 @@ def aux_menu_dia(m):
         exception_log(e,m)
         
         
-# Función auxiliar usada por la función "horario"
+# Función auxiliar usada por el comando "horario"
 def aux_horario(m):
     
     grado = str(m.text)
     mandar_horario(grado,m)
         
+# Función auxiliar usada por el comando "examenes"
+def aux_examenes(m):
+    
+    grado = str(m.text)
+    mandar_examenes(grado,m)
+    
 ############
 # Listener #
 ############
@@ -362,7 +407,39 @@ def ayuda(m):
         exception_log(e,m)
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
 
-
+# Función encargada de dar el horario    
+@bot.message_handler(commands=['horario'])
+def horario(m):
+    
+    try:
+        log(m)
+        cid = m.chat.id
+        texto = "Elige el grado"
+        msg = bot.send_message(cid,texto, reply_markup=teclado_horario)
+        bot.register_next_step_handler(msg, aux_horario)
+        
+    except Exception as e:
+        bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
+        exception_log(e,m)
+        
+        
+# Función encargada de dar el horario
+@bot.message_handler(commands=['examenes'])
+def prueba(m):
+    
+    try:
+        log(m)
+        cid = m.chat.id
+        
+        texto = "Elige el grado"
+        msg = bot.send_message(cid,texto, reply_markup=teclado_examenes)
+        bot.register_next_step_handler(msg,aux_examenes)
+        
+    except Exception as e:
+        bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
+        exception_log(e,m)
+        
+        
 # Información de contacto de la escuela
 @bot.message_handler(commands=['contacto'])
 def contacto(m):
@@ -377,57 +454,6 @@ def contacto(m):
 
     bot.send_message(cid,mensaje)    
     
-
-
-
-
-#Examenes grado ingenieria informatica
-@bot.message_handler(commands=['examenes_gii'])
-def obtener_examenes_gii(m):
-    mandar_examenes('informatica',m)
-    
-#Examenes grado ingenieria informatica
-@bot.message_handler(commands=['examenes_gitt'])
-def obtener_examenes_gitt(m):
-    mandar_examenes('teleco',m)
-    
-    
-
-
-# Examenes    
-@bot.message_handler(commands=['examenes'])
-def obtener_examenes(m):
-    
-    log(m)
-    try:
-        if os.path.isfile('../examenes/examenes.pdf'):
-
-            enviar_archivo(m,'../examenes/examenes.pdf')
-
-        else:
-            url = 'http://etsiit.ugr.es/pages/calendario_academico/calendarioexamenes1516/!'
-            cj = cookielib.CookieJar()
-        
-            opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
-            
-            request = urllib2.Request(url)
-            
-            f = opener.open(request)
-            data = f.read()
-            f.close()
-            opener.close()
-            
-            FILE = open('../examenes/examenes.pdf', "wb+")
-            FILE.write(data)
-            FILE.close()
-            
-            enviar_archivo(m,'../examenes/examenes.pdf')
-            
-    except Exception as e:
-        bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
-        exception_log(e,m)
-
-
 # Envia localizacion
 @bot.message_handler(commands=['localizacion'])
 def obtener_localizacion(m):
@@ -509,22 +535,8 @@ def menu_dia(m):
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
         exception_log(e,m)
         
-# Función encargada de dar el horario    
-@bot.message_handler(commands=['horario'])
-def horario(m):
-    
-    try:
-        log(m)
-        cid = m.chat.id
-        texto = "Elige el grado"
-        msg = bot.send_message(cid,texto, reply_markup=teclado_horario)
-        bot.register_next_step_handler(msg, aux_horario)
+
         
-    except Exception as e:
-        bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
-        exception_log(e,m)
-    
-    
 # Evita sobrecarga de la cpu    
 while True: 
     time.sleep(300)

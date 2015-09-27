@@ -18,6 +18,8 @@ sin necesidad de / te responderá indicando como obtener lo que buscas
 
 La interacción con ETSIITBOT ahora se realiza de una manera mas natural.
 
+Esta interacción esta disponible para elegir el horario y los examenes
+
 ![Captura2](Imagenes/horario1.png)
 
 Tras seleccionar el grado del que queramos el horario ETSIITBOT nos lo enviará
@@ -26,8 +28,6 @@ Tras seleccionar el grado del que queramos el horario ETSIITBOT nos lo enviará
 
 * /horario - Ofrece los diferentes horarios a traves de un teclado
 * /examenes => Proporciona los examenes del curso 2015/2016 para todos los grados.
-* /examenes_gii =>Examenes del curso 2015/2016 para  el grado de ingeniería informática.
-* /examenes_gitt => Examenes del curso 2015/2016 ara el grado de ingeniería en telecomunicaciones.
 * /localizacion => Localización de la escuela en google maps.
 * /contacto => Información de contacto de la escuela.
 * /web => Web de la escuela
