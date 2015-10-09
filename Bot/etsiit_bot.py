@@ -269,21 +269,28 @@ def aux_menu_dia(m):
         
         dia_seleccionado = str(m.text)
         
-        mensaje = "¡Hola!\n\nAquí tienes el menú del " + dia_seleccionado.lower() + ", ¡Buen provecho! \n\n"
-        
         info_dias = obtener_menu()
         
-        aux = BeautifulSoup(info_dias[dias[dia_seleccionado]],"lxml")
+        if(len(info_dias)==0):
+            bot.reply_to(m,'Hay un error en la web de comedores, intentelo mas tarde')
 
-        mensaje += obtener_menu_dia(aux)
+        else:
+        
+            mensaje = "¡Hola!\n\nAquí tienes el menú del " + dia_seleccionado.lower() + ", ¡Buen provecho! \n\n"
+            
+            aux = BeautifulSoup(info_dias[dias[dia_seleccionado]],"lxml")
+    
+    
+            mensaje += obtener_menu_dia(aux)
+                    
+            mensaje += "Precio por menú: 3,5€"
+    
+            bot.reply_to(m, mensaje, reply_markup=hideBoard) 
                 
-        mensaje += "Precio por menú: 3,5€"
-
-        bot.reply_to(m, mensaje, reply_markup=hideBoard)    
-
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
         exception_log(e,m)
+
         
         
 # Función auxiliar usada por el comando "horario"
@@ -398,7 +405,6 @@ def ayuda(m):
     
     cid = m.chat.id
     
-    
     try:
         mensaje = open('../informacion/ayuda.txt', 'r').read()
         bot.send_message(cid,mensaje)
@@ -425,7 +431,7 @@ def horario(m):
         
 # Función encargada de dar el horario
 @bot.message_handler(commands=['examenes'])
-def prueba(m):
+def examenes(m):
     
     try:
         log(m)
@@ -497,17 +503,22 @@ def menu_semana(m):
         cid = m.chat.id
         
         info_dias = obtener_menu()
-    
-        mensaje = "¡Hola!\n\nAquí tienes el menú de la semana, ¡Buen provecho! \n\n"
         
-        for dia in info_dias:  
+        #Con esto comprobamos que hemos extraido informacion de la web de comedores
+        if(len(info_dias) == 0):
+            bot.reply_to(m,'Hay un error en la web de comedores, intentelo mas tarde')
             
-            aux = BeautifulSoup(dia,"lxml") #Sacamos la información de un dia concreto
+        else:
+            mensaje = "¡Hola!\n\nAquí tienes el menú de la semana, ¡Buen provecho! \n\n"
             
-            mensaje += obtener_menu_dia(aux) #Sacamos el menu de la informacion de dicho dia
-    
-        mensaje += "Precio por menú: 3,5€"
-        bot.send_message(cid,mensaje)
+            for dia in info_dias:  
+                
+                aux = BeautifulSoup(dia,"lxml") #Sacamos la información de un dia concreto
+                
+                mensaje += obtener_menu_dia(aux) #Sacamos el menu de la informacion de dicho dia
+        
+            mensaje += "Precio por menú: 3,5€"
+            bot.send_message(cid,mensaje)
     
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
@@ -534,8 +545,6 @@ def menu_dia(m):
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
         exception_log(e,m)
-        
-
         
 # Evita sobrecarga de la cpu    
 while True: 
