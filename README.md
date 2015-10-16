@@ -1,19 +1,17 @@
 # ETSIIT BOT
-Bot de telegram sobre la ETSIIT de la universidad de Granada
+Bot de telegram en python3 sobre la ETSIIT de la universidad de Granada
 
 La idea de este bot es proporcionar información sobre la escuela de manera simple y sencilla.
 
 Nombre del bot: @ETSIITBOT
-
-Por una serie de problemas con el host, el bot puede no estar disponible
 
 Por motivos de privacidad de los usuarios el bot no puede ser incluido en grupos.
 
 
 ##Funcionalidades
 
-ETSIITBOT ahora es un poquito mas inteligente, al detectar la palabra horario y/o exámenes en el mensaje
-sin necesidad de / te responderá indicando como obtener lo que buscas
+ETSIITBOT ahora es un poquito mas inteligente, al detectar que buscas el horario, menu o examenes
+te responderá indicando como obtener lo que buscas
 
 ![Captura1](http://i1045.photobucket.com/albums/b460/Alejandro_Casado/ETSIITBOT/pasiva_zpsu03alnpi.png)
 

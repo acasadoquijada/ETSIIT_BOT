@@ -1,29 +1,31 @@
-# --* coding: utf-8 -*-
 
 import telebot 
 from telebot import types 
-from lxml import html
 from bs4 import BeautifulSoup
-
-import string
+from lxml import html
 import requests
 import re
-import urllib2, cookielib, os.path, time, sys
-import chardet
+import os.path,sys #cookielib, os.path, time, 
+import time
+
+import urllib.request, urllib.parse, urllib.error
+
+
 
 sys.path.append('../informacion/')
 from conf import token
-
-
-reload(sys) 
-sys.setdefaultencoding("utf-8")
-
-# Creamos el objeto bot que representa a ETSIITBOT
 bot = telebot.TeleBot(token)
 
-# Para que el bot siga ejecutandose aunque presente errores
-bot.polling(none_stop=True) 
 
+############
+# Listener #
+############
+
+def listener(messages):
+    for m in messages:
+        ayuda_pasiva(m)
+        
+bot.set_update_listener(listener) 
 
 ####################################
 # Definimos los distintos teclados #
@@ -80,9 +82,6 @@ def limpiar_plato(aux):
     plato_limpio = re.sub('\s+',' ',plato_limpio)
     
     return plato_limpio
-    
-    
-
 # Devuelve la informacion sobre el menú en una lista
 def obtener_menu():
     
@@ -145,12 +144,13 @@ def obtener_menu_dia(dia):
     mensaje += plato3 + "\n\n"    
 
     return mensaje
-
+    
+    
 # Comprobamos si existe el horario y se actua en consecuencia
 def mandar_horario(grado,m):
     
     try:
-        log(m)
+        #log(m)
         path = '../Horarios/'
         nombre_fichero = 'horarios_gi'
         descriptor = 'horariosgi'
@@ -175,20 +175,8 @@ def mandar_horario(grado,m):
         
         else:
             url = 'http://etsiit.ugr.es/pages/calendario_academico/horarios1516/' + descriptor
-            cj = cookielib.CookieJar()
         
-            opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
-            
-            request = urllib2.Request(url)
-            
-            f = opener.open(request)
-            data = f.read()
-            f.close()
-            opener.close()
-            
-            FILE = open(path + nombre_fichero, "wb+")
-            FILE.write(data)
-            FILE.close()
+            #urllib.request.urlretrieve(url, path + nombre_fichero)
 
             enviar_archivo(m,path + nombre_fichero)
             
@@ -196,12 +184,11 @@ def mandar_horario(grado,m):
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
         #exception_log(e,m)
 
-
 # Comprobamos si existe el horario y se actua en consecuencia
 def mandar_examenes(grado,m):
     
     try:
-        log(m)
+        #log(m)
         path = '../examenes/'
         nombre_fichero = ''
 
@@ -226,40 +213,9 @@ def mandar_examenes(grado,m):
             
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
-        exception_log(e,m)
+        #exception_log(e,m)
         
-# Comprobamos si existe los examenes y se actua en consecuencia
-def obtener_examenes(m):
     
-    log(m)
-    try:
-        if os.path.isfile('../examenes/examenes.pdf'):
-
-            enviar_archivo(m,'../examenes/examenes.pdf')
-
-        else:
-            url = 'http://etsiit.ugr.es/pages/calendario_academico/calendarioexamenes1516/!'
-            cj = cookielib.CookieJar()
-        
-            opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
-            
-            request = urllib2.Request(url)
-            
-            f = opener.open(request)
-            data = f.read()
-            f.close()
-            opener.close()
-            
-            FILE = open('../examenes/examenes.pdf', "wb+")
-            FILE.write(data)
-            FILE.close()
-            
-            enviar_archivo(m,'../examenes/examenes.pdf')
-            
-    except Exception as e:
-        bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
-        exception_log(e,m)        
-        
 #Función auxiliar usado por menu_dia
 def aux_menu_dia(m):
     
@@ -272,7 +228,7 @@ def aux_menu_dia(m):
         info_dias = obtener_menu()
         
         if(len(info_dias)==0):
-            bot.reply_to(m,'Hay un error en la web de comedores, intentelo mas tarde')
+            bot.reply_to(m,'Hay un error en la web de comedores, intentelo mas tarde',reply_markup=hideBoard)
 
         else:
         
@@ -305,15 +261,7 @@ def aux_examenes(m):
     grado = str(m.text)
     mandar_examenes(grado,m)
     
-############
-# Listener #
-############
 
-def listener(messages):
-    for m in messages: 
-        ayuda_pasiva(m)
-        
-bot.set_update_listener(listener) 
 
 
 #####################
@@ -372,6 +320,10 @@ def ayuda_pasiva(m):
             if ("examenes" in m.text.lower() or "exámenes" in m.text.lower()) and m.text[0] != "/" :
                 mensaje = open('../informacion/ayuda_pasiva_examenes.txt', 'r').read()
                 bot.reply_to(m,mensaje)
+                
+            if("menu" in m.text.lower() and m.text[0] != "/"):
+                mensaje = open('../informacion/ayuda_pasiva_examenes.txt', 'r').read()
+                bot.reply_to(m,mensaje)
         
     except Exception as e:
         exception_log(e,m)
@@ -406,7 +358,7 @@ def ayuda(m):
     cid = m.chat.id
     
     try:
-        mensaje = open('../informacion/ayuda.txt', 'r').read()
+        mensaje = open('informacion/ayuda.txt', 'r').read()
         bot.send_message(cid,mensaje)
         
     except Exception as e:
@@ -545,7 +497,5 @@ def menu_dia(m):
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
         exception_log(e,m)
-        
-# Evita sobrecarga de la cpu    
-while True: 
-    time.sleep(300)
+    
+bot.polling(none_stop=True)
