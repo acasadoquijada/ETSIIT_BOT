@@ -1,4 +1,6 @@
 
+# Bot realizado por Alejandro Casado Quijada
+
 import telebot 
 from telebot import types 
 from bs4 import BeautifulSoup
@@ -322,7 +324,7 @@ def ayuda_pasiva(m):
                 bot.reply_to(m,mensaje)
                 
             if("menu" in m.text.lower() and m.text[0] != "/"):
-                mensaje = open('../informacion/ayuda_pasiva_examenes.txt', 'r').read()
+                mensaje = open('../informacion/ayuda_pasiva_menu.txt', 'r').read()
                 bot.reply_to(m,mensaje)
         
     except Exception as e:
