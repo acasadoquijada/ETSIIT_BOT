@@ -1,0 +1,20 @@
+¡Hola!
+
+Estas son las funciones de las que dispongo:
+
+/horario - Ofrece los diferentes horarios a través de un teclado
+
+/examenes - Exámenes del curso 2015/2016 para todos los grados.
+
+/localizacion - Localizacion de la escuela en google maps.
+
+/contacto - Información de contacto de la escuela.
+
+/web - Proporciona la web de la escuela
+
+/menu_semana - Menu semanal de los comedores universitarios
+
+/menu_dia - Menu del dia seleccionado
+
+Contacto: acasadoquijada@gmail.com
+Repositorio: https://github.com/acasadoquijada/ETSIIT_BOT

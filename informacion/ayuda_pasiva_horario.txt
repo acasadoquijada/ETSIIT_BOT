@@ -1,0 +1,5 @@
+¡Hola!
+
+Creo que buscas los horarios, usa esto:
+
+/horario - Horario del curso 2015/2016

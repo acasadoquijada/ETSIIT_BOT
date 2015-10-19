@@ -1,0 +1,11 @@
+¡Hola!
+
+Soy el bot no oficial de la E.T.S.I.I.T de Granada estoy aqui para proporcionarte informacion sobre ella, como horarios, examenes..
+
+Actualmente estoy en construccion, si echas en falta alguna funcionalidad puedes 
+enviarnos una sugerencia o, ¡incorporarla tu mismo!
+
+Para ver mis funcionalidades usa /ayuda
+
+Contacto: acasadoquijada@gmail.com
+Repositorio: https://github.com/acasadoquijada/ETSIIT_BOT

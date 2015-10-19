@@ -1,0 +1,6 @@
+¡Hola!
+
+Creo que buscas el menu, usa esto:
+
+/menu_semana - Menú de la semana de los comedores de la ugr
+/menu_dia - Menú del día seleccionado
