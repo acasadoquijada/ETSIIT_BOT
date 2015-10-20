@@ -1,0 +1,132 @@
+Times exception:07/09/15 18:01:33
+Cause of the exception: /horario_git
+Exception: <urlopen error unknown url type: ttp>
+
+Times exception:07/09/15 18:14:54
+Cause of the exception: /horario_git
+Exception: <urlopen error unknown url type: ttp>
+
+Times exception:07/09/15 18:14:58
+Cause of the exception: /horario_git
+Exception: <urlopen error unknown url type: ttp>
+
+Times exception:07/09/15 18:15:13
+Cause of the exception: /horario_git
+Exception: <urlopen error unknown url type: ttp>
+
+Times exception: 08/09/15 14:17:35
+Cause of the exception: /examenes
+Exception: [Errno 2] No such file or directory: '../examense/examenes.pdf'
+
+Times exception: 09/09/15 16:23:52
+Cause of the exception: /examenes
+Exception: [Errno 2] No such file or directory: 'http://etsiit.ugr.es/pages/calendario_academico/calendarioexamenes1516masterit/!'
+
+Times exception: 21/09/15 10:56:31
+Cause of the exception: /start
+Exception: [Errno 2] No such file or directory: '../informacion/strt.txt'
+
+Times exception: 25/09/15 08:51:44
+Cause of the exception: /menu
+Exception: 'charmap' codec can't encode characters in position 9-11: character maps to <undefined>
+
+Times exception: 25/09/15 16:32:20
+Cause of the exception: horario
+Exception: A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[{"ok":false,"error_code":400,"description":"Error: Bad Request: wrong chat id"}]
+
+Times exception: 26/09/15 13:10:35
+Cause of the exception: /lunes
+Exception: '/lunes'
+
+Times exception: 26/09/15 13:10:56
+Cause of the exception: /menu_dia@ETSIITBOT
+Exception: '/menu_dia@ETSIITBOT'
+
+Times exception: 26/09/15 13:11:05
+Cause of the exception: /horario_gii@ETSIITBOT
+Exception: '/horario_gii@ETSIITBOT'
+
+Times exception: 27/09/15 15:34:23
+Cause of the exception: Telecomunicaciones
+Exception: 'Telecomunicaciones'
+
+Times exception: 27/09/15 15:46:29
+Cause of the exception: Exception: 'int' object has no attribute 'from_user'
+
+Times exception: 28/09/15 08:24:38
+Cause of the exception: U
+Exception: 'U'
+
+Times exception: 28/09/15 17:10:19
+Cause of the exception: Día
+Exception: 'D\xc3\xada'
+
+Times exception: 28/09/15 17:13:27
+Cause of the exception: Dia
+Exception: 'Dia'
+
+Times exception: 05/10/15 12:15:59
+Cause of the exception: /menu_dia
+Exception: '/menu_dia'
+
+Times exception: 09/10/15 12:01:21
+Cause of the exception: Viernes
+Exception: list index out of range
+
+Times exception: 09/10/15 12:02:56
+Cause of the exception: Sabado
+Exception: list index out of range
+
+Times exception: 09/10/15 14:34:08
+Cause of the exception: Miercoles
+Exception: list index out of range
+
+Times exception: 09/10/15 14:34:08
+Cause of the exception: Miercoles
+Exception: local variable 'aux' referenced before assignment
+
+Times exception: 09/10/15 14:37:24
+Cause of the exception: Miercoles
+Exception: list index out of range
+
+Times exception: 09/10/15 14:39:06
+Cause of the exception: Miercoles
+Exception: list index out of range
+
+Times exception: 09/10/15 14:39:26
+Cause of the exception: Lunes
+Exception: list index out of range
+
+Times exception: 09/10/15 14:39:54
+Cause of the exception: Martes
+Exception: find() takes no keyword arguments
+
+Times exception: 09/10/15 14:41:45
+Cause of the exception: Miercoles
+Exception: list index out of range
+
+Times exception: 09/10/15 14:42:28
+Cause of the exception: Miercoles
+Exception: list index out of range
+
+Times exception: 19/10/15 07:48:32
+Cause of the exception: /ayuda
+Exception: [Errno 2] No such file or directory: 'informacion/ayuda.txt'
+
+Times exception: 19/10/15 07:48:35
+Cause of the exception: /ayuda
+Exception: [Errno 2] No such file or directory: 'informacion/ayuda.txt'
+
+Times exception: 19/10/15 07:57:21
+Cause of the exception: /ayuda
+Exception: [Errno 2] No such file or directory: 'informacion/ayuda.txt'
+
+Times exception: 19/10/15 08:06:26
+Cause of the exception: /ayuda
+Exception: [Errno 2] No such file or directory: 'informacion/ayuda.txt'
+
+Times exception: 20/10/15 16:47:56
+Cause of the exception: /menu_semana
+Exception: name 'obtener_menu' is not defined
+

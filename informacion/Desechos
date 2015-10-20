@@ -1,0 +1,26 @@
+#Horario grado ingenieria informatica
+@bot.message_handler(commands=['horario_gii'])
+def obtener_horario_gii(m):
+    mandar_horario('informatica',m)
+
+
+#Horario grado ingenieria telecomunicaciones
+@bot.message_handler(commands=['horario_gitt'])
+def obtener_horario_gitt(m):
+    mandar_horario('teleco',m)
+        
+#Horario grado ingenieria inf+mates
+@bot.message_handler(commands=['horario_gim'])
+def obtener_horario_gim(m):
+    mandar_horario('matematicas',m)
+    
+    
+#Examenes grado ingenieria informatica
+@bot.message_handler(commands=['examenes_gii'])
+def obtener_examenes_gii(m):
+    mandar_examenes('informatica',m)
+    
+#Examenes grado ingenieria informatica
+@bot.message_handler(commands=['examenes_gitt'])
+def obtener_examenes_gitt(m):
+    mandar_examenes('teleco',m)

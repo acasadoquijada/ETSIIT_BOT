@@ -36,6 +36,19 @@ Esta interacción esta disponible para elegir el horario, los examenes y el men�
 * /menu_dia - Menú del día seleccionado
 * /ayuda - Información detallada sobre las funciones.
 
+##Estructura
+
+ETSIITBOT cuenta con los siguientes módulos:
+
+* ayuda_pasiva.py - Se encarga de la gestión de la ayuda pasiva
+* bot.py - Crea el bot
+* etsiit_bot - "Cuerpo" del bot, donde se definen los comandos a los que reacciona
+* funciones_auxiliares.py - Una serie de funciones auxiliares usadas por el bot
+* menu.py - Gestiona la obtención del menú de comedores
+* registros.py - Funciones relacionadas con el registro de actividad y excepciones
+* teclados.py - Creación de teclados
+
+
 ##Contacto
 acasadoquijada@gmail.com
 

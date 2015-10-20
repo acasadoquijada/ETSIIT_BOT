@@ -1,0 +1,598 @@
+Hay que sumarle 2 horas la fecha
+
+[02/09/15 17:05:10 Max Power 6422144]: /horario_gii
+[02/09/15 17:06:41 Max Power 6422144]: /horario_gii
+[02/09/15 17:06:52 Max Power 6422144]: /horario_gii
+[02/09/15 17:08:35 Max Power 6422144]: /horario_gii
+[02/09/15 17:09:06 Max Power 6422144]: /horario_gii
+[02/09/15 17:10:19 Max Power 6422144]: /horario_gii
+[02/09/15 18:25:35 Max Power 6422144]: /horario_gii
+[02/09/15 20:18:49 Max Power 6422144]: /horario_gim
+[03/09/15 12:39:11 Max Power 6422144]: /horario_gim
+[03/09/15 12:41:03 Max Power 6422144]: /horario_git
+[03/09/15 12:41:17 Max Power 6422144]: /horario_gii
+[07/09/15 13:58:38 Buttman None 6422144]: /horario_gii
+[07/09/15 13:58:38 Buttman None 6422144]: /horario_gii
+[07/09/15 14:00:17 Buttman None 6422144]: /horario_gim
+[07/09/15 14:00:58 Buttman None 6422144]: /horario_gim
+[07/09/15 14:02:45 Buttman None 6422144]: /horario_gim
+[07/09/15 14:03:30 Buttman None 6422144]: /horario_gii
+[07/09/15 14:05:30 Buttman None 6422144]: /horario_git
+[07/09/15 14:06:04 Buttman None 6422144]: /horario_git
+[07/09/15 14:10:08 Buttman None 6422144]: /horario_git
+[07/09/15 14:10:37 Buttman None 6422144]: /horario_git
+[07/09/15 14:10:50 Buttman None 6422144]: /horario_git
+[07/09/15 14:11:39 Buttman None 6422144]: /horario_gim
+[07/09/15 14:12:02 Buttman None 6422144]: /horario_gim
+[07/09/15 14:12:10 Buttman None 6422144]: /horario_git
+[07/09/15 14:12:19 Buttman None 6422144]: /horario_gii
+[07/09/15 14:16:27 Buttman None 6422144]: /horario_git
+[07/09/15 14:16:55 Buttman None 6422144]: /horario_gii
+[07/09/15 14:21:29 Buttman None 6422144]: /horario_git
+[07/09/15 17:02:34 Buttman None 6422144 @Manteca_de_coco]: /horario_git
+[07/09/15 18:00:41 Buttman None 6422144 @Manteca_de_coco]: /horario_git
+[07/09/15 18:00:53 Buttman None 6422144 @Manteca_de_coco]: /horario_git
+[07/09/15 18:01:17 Buttman None 6422144 @Manteca_de_coco]: /horario_git
+[07/09/15 18:01:33 Buttman None 6422144 @Manteca_de_coco]: /horario_git
+[07/09/15 18:14:54 Buttman None 6422144 @Manteca_de_coco]: /horario_git
+[07/09/15 18:14:58 Buttman None 6422144 @Manteca_de_coco]: /horario_git
+[07/09/15 18:15:05 Buttman None 6422144 @Manteca_de_coco]: /horario_gim
+[07/09/15 18:15:12 Buttman None 6422144 @Manteca_de_coco]: /horario_git
+[07/09/15 18:15:18 Buttman None 6422144 @Manteca_de_coco]: /horario_gim
+[07/09/15 18:15:25 Buttman None 6422144 @Manteca_de_coco]: /horario_gii
+[07/09/15 18:16:25 Buttman None 6422144 @Manteca_de_coco]: /horario_git
+[08/09/15 10:40:35 Buttman None 6422144 @Manteca_de_coco]: /prueba
+[08/09/15 10:41:37 Buttman None 6422144 @Manteca_de_coco]: /prueba
+[08/09/15 11:12:44 Buttman None 6422144 @Manteca_de_coco]: /localizacion
+[08/09/15 11:43:07 Buttman None 6422144 @Manteca_de_coco]: /localizacion
+[08/09/15 11:52:07 Buttman None 6422144 @Manteca_de_coco]: /localizacion@ETSIITBOT
+[08/09/15 11:58:06 Buttman None 6422144 @Manteca_de_coco]: /localizacion@ETSIITBOT
+[08/09/15 11:58:54 Buttman None 6422144 @Manteca_de_coco]: /localizacion@ETSIITBOT
+[08/09/15 12:00:27 Buttman None 6422144 @Manteca_de_coco]: /contacto
+[08/09/15 12:49:06 Buttman None 6422144 @Manteca_de_coco]: /localizacion@ETSIITBOT
+[08/09/15 14:17:29 Buttman None 6422144 @Manteca_de_coco]: /start
+[08/09/15 14:17:42 Buttman None 6422144 @Manteca_de_coco]: /horario_gim
+[08/09/15 15:29:20 Buttman None 6422144 @Manteca_de_coco]: /start
+[08/09/15 16:52:11 Diego None 9423178 @lIlllIIIlIlIIl]: /localizacion@ETSIITBOT
+[08/09/15 19:29:23 Buttman None 6422144 @Manteca_de_coco]: /localizacion
+[08/09/15 20:16:53 Luvo-chan desuu~~ None 7719679 @LuvoDovic]: /horario_git@ETSIITBOT
+[08/09/15 20:19:57 Diego None 9423178 @lIlllIIIlIlIIl]: /start
+[09/09/15 05:51:24 Buttman None 6422144 @Manteca_de_coco]: /contacto
+[09/09/15 08:53:13 Buttman None 6422144 @Manteca_de_coco]: /localizacion@ETSIITBOT
+[09/09/15 14:54:34 Yus None 62551301 @DontYusWorryChild]: /horario_gii@ETSIITBOT
+[09/09/15 14:54:38 Yus None 62551301 @DontYusWorryChild]: /horario_gii@ETSIITBOT
+[09/09/15 15:46:49 Buttman None 6422144 @Manteca_de_coco]: /horario_gii
+[09/09/15 15:46:58 Yus None 62551301 @DontYusWorryChild]: /horario_gii
+[09/09/15 16:09:58 Buttman None 6422144 @Manteca_de_coco]: /ayuda
+[09/09/15 16:11:30 Buttman None 6422144 @Manteca_de_coco]: /ayuda
+[09/09/15 16:11:33 Buttman None 6422144 @Manteca_de_coco]: /localizacion
+[09/09/15 16:11:35 Buttman None 6422144 @Manteca_de_coco]: /contacto
+[09/09/15 16:12:08 Buttman None 6422144 @Manteca_de_coco]: /ayuda
+[09/09/15 16:12:27 Buttman None 6422144 @Manteca_de_coco]: /ayuda
+[09/09/15 16:12:59 Buttman None 6422144 @Manteca_de_coco]: /ayuda
+[09/09/15 16:13:25 Buttman None 6422144 @Manteca_de_coco]: /ayuda
+[09/09/15 16:23:47 Sam None 7466748 @None]: /horario_gii
+[09/09/15 16:23:48 Sam None 7466748 @None]: /horario_gii
+[09/09/15 16:24:17 Buttman None 6422144 @Manteca_de_coco]: /horario_gii
+[09/09/15 16:24:27 Buttman None 6422144 @Manteca_de_coco]: /horario_gim
+[09/09/15 16:24:38 Buttman None 6422144 @Manteca_de_coco]: /horario_git
+[09/09/15 16:28:13 Buttman None 6422144 @Manteca_de_coco]: /ayuda
+[09/09/15 16:28:23 Buttman None 6422144 @Manteca_de_coco]: /ayuda@ETSIITBOT
+[09/09/15 16:41:22 Buttman None 6422144 @Manteca_de_coco]: /horario_gii@ETSIITBOT
+[09/09/15 16:43:15 Buttman None 6422144 @Manteca_de_coco]: /horario_git@ETSIITBOT
+[09/09/15 18:04:56 Buttman None 6422144 @Manteca_de_coco]: /ayuda
+[09/09/15 18:54:21 Buttman None 6422144 @Manteca_de_coco]: /horario_gii
+[09/09/15 19:22:20 Buttman None 6422144 @Manteca_de_coco]: /start
+[09/09/15 21:42:50 Enrique None 9207080 @nRaiker]: /horario_gii@ETSIITBOT
+[09/09/15 21:44:11 Buttman None 6422144 @Manteca_de_coco]: /ayuda@ETSIITBOT
+[09/09/15 22:51:52 Enrique None 9207080 @nRaiker]: /contacto@ETSIITBOT
+[10/09/15 09:48:40 Arvelta None 1450562 @ManiaquePUTOAMO]: /horario_gii@ETSIITBOT
+[10/09/15 16:58:32 Enrique None 9207080 @nRaiker]: /contacto@ETSIITBOT
+[10/09/15 17:16:09 Buttman None 6422144 @Manteca_de_coco]: /ayuda
+[10/09/15 17:18:19 Buttman None 6422144 @Manteca_de_coco]: /ayuda
+[10/09/15 17:18:19 Buttman None 6422144 @Manteca_de_coco]: /contacto
+[10/09/15 20:44:04 Rubén None 12372285 @ToLokojajaxd]: /start
+[10/09/15 21:29:41 Rubén None 12372285 @ToLokojajaxd]: /horario_gii
+[12/09/15 19:05:17 Buttman None 6422144 @Manteca_de_coco]: /contacto
+[13/09/15 12:45:52 Buttman None 6422144 @Manteca_de_coco]: /horario_gii
+[13/09/15 12:47:01 Buttman None 6422144 @Manteca_de_coco]: /localizacion
+[14/09/15 12:12:05 Diego None 9423178 @lIlllIIIlIlIIl]: /horario_gii@ETSIITBOT
+[14/09/15 12:12:05 Alex None 6422144 @Manteca_de_coco]: /horario_gii
+[14/09/15 13:13:42 Alex None 6422144 @Manteca_de_coco]: /web
+[14/09/15 19:07:50 Alex None 6422144 @Manteca_de_coco]: /web
+[14/09/15 19:08:02 Alex None 6422144 @Manteca_de_coco]: /horario_gii
+[14/09/15 20:37:16 Alex None 6422144 @Manteca_de_coco]: /web
+[15/09/15 11:45:15 Alex None 6422144 @Manteca_de_coco]: /web
+[15/09/15 11:45:22 Alex None 6422144 @Manteca_de_coco]: /web
+[15/09/15 11:45:36 Alex None 6422144 @Manteca_de_coco]: /localizacion
+[15/09/15 11:45:51 Alex None 6422144 @Manteca_de_coco]: /horario_gii
+[15/09/15 13:20:27 Alex None 6422144 @Manteca_de_coco]: /web@ETSIITBOT
+[15/09/15 13:24:21 Enrique None 9207080 @nRaiker]: /ayuda@ETSIITBOT
+[15/09/15 13:24:31 Enrique None 9207080 @nRaiker]: /contacto@ETSIITBOT
+[16/09/15 12:31:31 Alex None 6422144 @Manteca_de_coco]: /web
+[16/09/15 14:14:56 Luvo-chan desuu~~ None 7719679 @luvodovic]: /start
+[17/09/15 10:48:57 Arvelta None 1450562 @ManiaquePUTOAMO]: /horario_gii@ETSIITBOT
+[17/09/15 10:48:57 Alex None 6422144 @Manteca_de_coco]: /web
+[17/09/15 10:48:57 Enrique None 9207080 @nRaiker]: /horario_gii@ETSIITBOT
+[17/09/15 10:48:57 Alex None 6422144 @Manteca_de_coco]: /web@ETSIITBOT
+[17/09/15 11:04:02 Alex None 6422144 @Manteca_de_coco]: /contacto
+[17/09/15 11:04:20 Alex None 6422144 @Manteca_de_coco]: /contacto
+[17/09/15 11:05:29 Alex None 6422144 @Manteca_de_coco]: /contacto
+[17/09/15 11:05:36 Alex None 6422144 @Manteca_de_coco]: /ayuda
+[17/09/15 11:25:32 Alex None 6422144 @Manteca_de_coco]: /contacto
+[17/09/15 14:31:12 Alex None 6422144 @Manteca_de_coco]: /contacto
+[17/09/15 14:31:20 Alex None 6422144 @Manteca_de_coco]: /ayuda
+[17/09/15 19:04:45 Alex None 6422144 @Manteca_de_coco]: /localizacion
+[17/09/15 21:42:35 Alex None 6422144 @Manteca_de_coco]: /web
+[17/09/15 21:42:41 Alex None 6422144 @Manteca_de_coco]: /contacto
+[17/09/15 21:42:48 Alex None 6422144 @Manteca_de_coco]: /contacto
+[17/09/15 21:42:59 Alex None 6422144 @Manteca_de_coco]: /horario_gii
+[18/09/15 08:26:59 Alex None 6422144 @Manteca_de_coco]: /web
+[18/09/15 13:34:37 Alex None 6422144 @Manteca_de_coco]: /web
+[19/09/15 08:26:25 Alex None 6422144 @Manteca_de_coco]: /web
+[19/09/15 08:26:28 Alex None 6422144 @Manteca_de_coco]: /contacto
+[19/09/15 09:01:27 Alex None 6422144 @Manteca_de_coco]: /start
+[21/09/15 09:42:49 Diego None 9423178 @lIlllIIIlIlIIl]: /horario_gii@ETSIITBOT
+[21/09/15 09:42:49 Alex None 6422144 @Manteca_de_coco]: /contacto@ETSIITBOT
+[21/09/15 09:42:49 Alex None 6422144 @Manteca_de_coco]: /web
+[21/09/15 10:37:55 Alex None 6422144 @Manteca_de_coco]: /examenes_gii
+[21/09/15 10:40:17 Alex None 6422144 @Manteca_de_coco]: /examenes_gitt
+[21/09/15 10:49:13 Alex None 6422144 @Manteca_de_coco]: /ayuda
+[21/09/15 10:49:17 Alex None 6422144 @Manteca_de_coco]: /examenes_gii
+[21/09/15 10:49:36 Alex None 6422144 @Manteca_de_coco]: /examenes_gitt@ETSIITBOT
+[21/09/15 10:54:11 Alex None 6422144 @Manteca_de_coco]: /start
+[21/09/15 10:55:32 Alex None 6422144 @Manteca_de_coco]: /start
+[21/09/15 10:55:54 Alex None 6422144 @Manteca_de_coco]: /start
+[21/09/15 10:56:06 Alex None 6422144 @Manteca_de_coco]: /start
+[21/09/15 10:56:31 Alex None 6422144 @Manteca_de_coco]: /start
+[21/09/15 10:59:35 Alex None 6422144 @Manteca_de_coco]: /start
+[21/09/15 10:59:38 Alex None 6422144 @Manteca_de_coco]: /ayuda
+[21/09/15 10:59:56 Alex None 6422144 @Manteca_de_coco]: /ayuda
+[21/09/15 11:01:50 Alex None 6422144 @Manteca_de_coco]: /ayuda@ETSIITBOT
+[21/09/15 11:03:11 Alex None 6422144 @Manteca_de_coco]: /horario_gitt
+[21/09/15 12:16:53 Alex None 6422144 @Manteca_de_coco]: /examenes_gii
+[21/09/15 12:43:46 Alex None 6422144 @Manteca_de_coco]: /localizacion
+[21/09/15 14:45:46 Alex None 6422144 @Manteca_de_coco]: /ayuda
+[21/09/15 17:58:33 Alex None 6422144 @Manteca_de_coco]: /web
+[22/09/15 08:42:27 Alex None 6422144 @Manteca_de_coco]: /horario_gii
+[22/09/15 15:20:04 Alex None 6422144 @Manteca_de_coco]: /web
+[22/09/15 16:17:09 Alex None 6422144 @Manteca_de_coco]: /examenes
+[22/09/15 17:00:02 Alex None 6422144 @Manteca_de_coco]: /web
+[22/09/15 17:00:16 Alex None 6422144 @Manteca_de_coco]: /contacto
+[22/09/15 19:25:32 Alex None 6422144 @Manteca_de_coco]: /web
+[22/09/15 19:43:33 Alex None 6422144 @Manteca_de_coco]: /ayuda
+[22/09/15 22:16:48 Yus None 62551301 @DontYusWorryChild]: /horario_gii@ETSIITBOT
+[23/09/15 06:16:42 Alex None 6422144 @Manteca_de_coco]: /horario_gii
+[23/09/15 08:12:22 Alex None 6422144 @Manteca_de_coco]: /horario_gii
+[23/09/15 11:43:05 Yus None 62551301 @DontYusWorryChild]: /horario_gii@ETSIITBOT
+[23/09/15 15:24:40 Luvo-chan desuu~~ None 7719679 @luvodovic]: /horario_gii@ETSIITBOT
+[23/09/15 17:48:04 Yus None 62551301 @DontYusWorryChild]: /horario_gii@ETSIITBOT
+[23/09/15 18:08:32 Alex None 6422144 @Manteca_de_coco]: /web
+[24/09/15 11:59:53 Alex None 6422144 @Manteca_de_coco]: /web
+[24/09/15 12:03:01 Alex None 6422144 @Manteca_de_coco]: /horario_gii
+[24/09/15 13:21:33 Alex None 6422144 @Manteca_de_coco]: /web
+[24/09/15 17:46:21 Yus None 62551301 @DontYusWorryChild]: /horario_gii@ETSIITBOT
+[24/09/15 18:09:20 Alex None 6422144 @Manteca_de_coco]: /start
+[24/09/15 18:09:29 Alex None 6422144 @Manteca_de_coco]: /ayuda
+[25/09/15 05:48:05 Alex None 6422144 @Manteca_de_coco]: /horario_gii
+[25/09/15 06:58:14 Alex None 6422144 @Manteca_de_coco]: /web@ETSIITBOT
+[25/09/15 07:42:55 Alex None 6422144 @Manteca_de_coco]: /ayuda
+[25/09/15 08:37:57 Alex None 6422144 @Manteca_de_coco]: /menu
+[25/09/15 08:51:43 Alex None 6422144 @Manteca_de_coco]: /menu
+[25/09/15 09:03:50 Alex None 6422144 @Manteca_de_coco]: /horario_gii
+[25/09/15 09:57:06 Andrés Ortiz 4913114 @andresortiz]: /start
+[25/09/15 09:57:10 Andrés Ortiz 4913114 @andresortiz]: /web
+[25/09/15 09:57:46 Andrés Ortiz 4913114 @andresortiz]: /ayuda
+[25/09/15 09:57:58 Andrés Ortiz 4913114 @andresortiz]: /horario_gii
+[25/09/15 09:58:32 Andrés Ortiz 4913114 @andresortiz]: /menu
+[25/09/15 09:58:54 Andrés Ortiz 4913114 @andresortiz]: /ayuda
+[25/09/15 09:59:03 Mariano Palomo 10963136 @mpv_prod]: /start
+[25/09/15 10:00:53 Mariano Palomo 10963136 @mpv_prod]: /menu
+[25/09/15 10:02:33 Andrés Ortiz 4913114 @andresortiz]: /ayuda
+[25/09/15 10:05:31 Carlos Martin 712610 @Nitrosito]: /start
+[25/09/15 10:05:41 Carlos Martin 712610 @Nitrosito]: /horario_gii
+[25/09/15 10:22:36 Chino None 12032658 @None]: /horario_gim@ETSIITBOT
+[25/09/15 10:51:42 Andrés Ortiz 4913114 @andresortiz]: /web
+[25/09/15 10:52:08 Andrés Ortiz 4913114 @andresortiz]: /ayuda
+[25/09/15 10:52:20 Andrés Ortiz 4913114 @andresortiz]: /examenes
+[25/09/15 10:52:38 Andrés Ortiz 4913114 @andresortiz]: /menu
+[25/09/15 10:53:38 Andrés Ortiz 4913114 @andresortiz]: /horario_gii
+[25/09/15 10:54:43 Andrés Ortiz 4913114 @andresortiz]: /examenes
+[25/09/15 10:54:59 Andrés Ortiz 4913114 @andresortiz]: /localizacion
+[25/09/15 11:08:19 Andrés Ortiz 4913114 @andresortiz]: /contacto
+[25/09/15 11:10:05 Andrés Ortiz 4913114 @andresortiz]: /web
+[25/09/15 11:10:17 Andrés Ortiz 4913114 @andresortiz]: /ayuda
+[25/09/15 12:01:33 Manu None 6112379 @Makova]: /horario_gii@ETSIITBOT
+[25/09/15 12:01:36 Manu None 6112379 @Makova]: /horario_gii@ETSIITBOT
+[25/09/15 12:01:39 Manu None 6112379 @Makova]: /horario_gii@ETSIITBOT
+[25/09/15 12:14:53 Alex None 6422144 @Manteca_de_coco]: /menu
+[25/09/15 15:43:00 Alex None 6422144 @Manteca_de_coco]: ¿Cuando serán los exámenes?
+[25/09/15 15:43:07 Alex None 6422144 @Manteca_de_coco]: ¿Cuando serán los exámenes examenes?
+[25/09/15 15:53:21 Enrique None 9207080 @nLoco]: gente
+[25/09/15 15:53:25 Enrique None 9207080 @nLoco]: os haace unas tapas luego?
+[25/09/15 15:54:48 Alex None 6422144 @Manteca_de_coco]: horariosss
+[25/09/15 15:55:01 Alex None 6422144 @Manteca_de_coco]: /horario_gii
+[25/09/15 15:55:01 Alex None 6422144 @Manteca_de_coco]: /horario_gii
+[25/09/15 15:58:21 Alex None 6422144 @Manteca_de_coco]: horario
+[25/09/15 15:58:29 Alex None 6422144 @Manteca_de_coco]: ahorario
+[25/09/15 15:59:36 Alex None 6422144 @Manteca_de_coco]: horario
+[25/09/15 15:59:41 Alex None 6422144 @Manteca_de_coco]: /horario_gii
+[25/09/15 15:59:41 Alex None 6422144 @Manteca_de_coco]: /horario_gii
+[25/09/15 16:04:53 Alex None 6422144 @Manteca_de_coco]: /horario_gii
+[25/09/15 16:04:53 Alex None 6422144 @Manteca_de_coco]: /horario_gii
+[25/09/15 16:13:00 Alex None 6422144 @Manteca_de_coco]: /horario_gii
+[25/09/15 16:13:00 Alex None 6422144 @Manteca_de_coco]: /horario_gii
+[25/09/15 16:13:09 Alex None 6422144 @Manteca_de_coco]: horario soplapolla
+[25/09/15 16:15:07 Alex None 6422144 @Manteca_de_coco]: examenes biatch
+[25/09/15 16:15:11 Alex None 6422144 @Manteca_de_coco]: /examenes
+[25/09/15 16:15:11 Alex None 6422144 @Manteca_de_coco]: /examenes
+[25/09/15 16:17:35 David Charte 382657 @fdavidcl]: /start
+[25/09/15 16:17:35 David Charte 382657 @fdavidcl]: /start
+[25/09/15 16:17:46 David Charte 382657 @fdavidcl]: /horario_gim
+[25/09/15 16:17:46 David Charte 382657 @fdavidcl]: /horario_gim
+[25/09/15 16:27:49 Alex None 6422144 @Manteca_de_coco]: /horario_gim
+[25/09/15 16:27:49 Alex None 6422144 @Manteca_de_coco]: /horario_gim
+[25/09/15 16:34:21 Alex None 6422144 @Manteca_de_coco]: /horario_gim
+[25/09/15 16:37:29 Alex None 6422144 @Manteca_de_coco]: /horario_gitt
+[25/09/15 16:37:46 Alex None 6422144 @Manteca_de_coco]: /menu
+[25/09/15 18:44:42 Alex None 6422144 @Manteca_de_coco]: /web@ETSIITBOT
+[25/09/15 18:46:14 Luvo-chan desuu~~ None 7719679 @luvodovic]: /horario_gii@ETSIITBOT
+[25/09/15 18:49:01 Alex None 6422144 @Manteca_de_coco]: /web@ETSIITBOT
+[25/09/15 18:58:35 Andrés Ortiz 4913114 @andresortiz]: /ayuda
+[25/09/15 19:40:11 Alex None 6422144 @Manteca_de_coco]: /ayuda
+[26/09/15 08:57:47 Alex None 6422144 @Manteca_de_coco]: /ayuda
+[26/09/15 09:09:00 Alex None 6422144 @Manteca_de_coco]: /ayuda
+[26/09/15 09:09:07 Alex None 6422144 @Manteca_de_coco]: /horario_gitt
+[26/09/15 10:23:14 ACharLuk (Gouji) None 12237762 @ACharLukG]: /start
+[26/09/15 10:27:08 ACharLuk (Gouji) None 12237762 @ACharLukG]: /horario_gii
+[26/09/15 10:27:27 ACharLuk (Gouji) None 12237762 @ACharLukG]: /horario_gim
+[26/09/15 10:27:57 ACharLuk (Gouji) None 12237762 @ACharLukG]: /examenes_gii
+[26/09/15 10:29:43 ACharLuk (Gouji) None 12237762 @ACharLukG]: /ayuda
+[26/09/15 10:29:55 ACharLuk (Gouji) None 12237762 @ACharLukG]: /web
+[26/09/15 10:29:57 ACharLuk (Gouji) None 12237762 @ACharLukG]: /menu
+[26/09/15 11:17:17 Luvo-chan desuu~~ None 7719679 @luvodovic]: /ayuda
+[26/09/15 11:55:00 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[26/09/15 12:02:07 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[26/09/15 12:04:30 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[26/09/15 12:05:19 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[26/09/15 12:05:31 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[26/09/15 12:05:49 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[26/09/15 12:06:04 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[26/09/15 12:06:20 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[26/09/15 12:06:28 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[26/09/15 12:31:32 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[26/09/15 12:32:28 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[26/09/15 12:50:35 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[26/09/15 12:58:09 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[26/09/15 13:03:20 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[26/09/15 13:10:26 Yus None 62551301 @DontYusWorryChild]: /menu_dia@ETSIITBOT
+[26/09/15 13:10:47 Arvelta None 1450562 @ManiaquePUTOAMO]: /menu_dia@ETSIITBOT Lunes
+[26/09/15 13:10:56 Luvo-chan desuu~~ None 7719679 @luvodovic]: /menu_dia@ETSIITBOT
+[26/09/15 13:11:05 Ahisa None 12468039 @BigChurrin]: /horario_gii@ETSIITBOT
+[26/09/15 13:13:01 Alex None 6422144 @Manteca_de_coco]: /web
+[26/09/15 13:13:05 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[26/09/15 13:43:30 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[26/09/15 14:38:32 Alex None 6422144 @Manteca_de_coco]: /horario_gii
+[26/09/15 15:03:27 Alex None 6422144 @Manteca_de_coco]: /ayuda
+[26/09/15 15:04:00 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[26/09/15 17:11:54 Alex None 6422144 @Manteca_de_coco]: /examenes_gii
+[26/09/15 17:12:11 Alex None 6422144 @Manteca_de_coco]: /horario_gii
+[26/09/15 17:12:48 Alex None 6422144 @Manteca_de_coco]: /horario_gii
+[26/09/15 17:15:17 Alex None 6422144 @Manteca_de_coco]: /horario_gii
+[26/09/15 17:15:51 Alex None 6422144 @Manteca_de_coco]: /horario_gim
+[26/09/15 17:19:43 Alex None 6422144 @Manteca_de_coco]: /examenes
+[26/09/15 17:28:22 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[26/09/15 17:31:06 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[26/09/15 17:34:08 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[26/09/15 17:34:14 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[26/09/15 18:57:39 ACharLuk (Gouji) None 12237762 @ACharLukG]: /localizacion
+[26/09/15 19:28:58 Diego None 9423178 @lIlllIIIlIlIIl]: /start
+[27/09/15 07:14:54 Yus None 62551301 @DontYusWorryChild]: /start
+[27/09/15 07:15:04 Yus None 62551301 @DontYusWorryChild]: /horario_gii
+[27/09/15 08:14:41 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[27/09/15 13:53:01 Luvo-chan desuu~~ None 7719679 @luvodovic]: /start
+[27/09/15 14:59:07 Diego None 9423178 @lIlllIIIlIlIIl]: /menu_semana
+[27/09/15 14:59:28 Diego None 9423178 @lIlllIIIlIlIIl]: /web
+[27/09/15 14:59:33 Diego None 9423178 @lIlllIIIlIlIIl]: /ayuda
+[27/09/15 15:04:22 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[27/09/15 15:07:40 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[27/09/15 15:49:18 Alex None 6422144 @Manteca_de_coco]: Telecomunicaciones
+[27/09/15 15:50:40 Alex None 6422144 @Manteca_de_coco]: Informática
+[27/09/15 15:54:17 Alex None 6422144 @Manteca_de_coco]: Telecomunicaciones
+[27/09/15 16:00:14 Alex None 6422144 @Manteca_de_coco]: Telecomunicaciones
+[27/09/15 16:06:29 Alex None 6422144 @Manteca_de_coco]: Informática
+[27/09/15 16:11:58 Alex None 6422144 @Manteca_de_coco]: Telecomunicaciones
+[27/09/15 16:20:29 Alex None 6422144 @Manteca_de_coco]: Telecomunicaciones
+[27/09/15 16:20:37 Alex None 6422144 @Manteca_de_coco]: Informática
+[27/09/15 16:20:47 Alex None 6422144 @Manteca_de_coco]: Todos
+[27/09/15 16:24:03 Alex None 6422144 @Manteca_de_coco]: /ayuda
+[27/09/15 16:25:18 Alex None 6422144 @Manteca_de_coco]: /ayuda
+[27/09/15 16:28:54 Alex None 6422144 @Manteca_de_coco]: /examenes
+[27/09/15 16:29:03 Alex None 6422144 @Manteca_de_coco]: /examenes
+[27/09/15 16:29:41 Alex None 6422144 @Manteca_de_coco]: /examenes
+[27/09/15 16:29:46 Alex None 6422144 @Manteca_de_coco]: Telecomunicaciones
+[27/09/15 16:31:40 Alex None 6422144 @Manteca_de_coco]: /ayuda
+[27/09/15 16:31:53 Alex None 6422144 @Manteca_de_coco]: /start
+[27/09/15 16:32:42 Alex None 6422144 @Manteca_de_coco]: /start
+[27/09/15 16:32:46 Alex None 6422144 @Manteca_de_coco]: /ayuda
+[27/09/15 16:32:50 Alex None 6422144 @Manteca_de_coco]: /horario
+[27/09/15 16:32:52 Alex None 6422144 @Manteca_de_coco]: Telecomunicaciones
+[27/09/15 16:33:14 Diego None 9423178 @lIlllIIIlIlIIl]: /horario
+[27/09/15 16:33:17 Diego None 9423178 @lIlllIIIlIlIIl]: Informática
+[27/09/15 16:45:12 Alex None 6422144 @Manteca_de_coco]: /horario
+[27/09/15 16:45:14 Alex None 6422144 @Manteca_de_coco]: Informática
+[27/09/15 18:29:34 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[27/09/15 19:14:43 Luvo-chan desuu~~ None 7719679 @luvodovic]: /menu_semana
+[27/09/15 19:34:35 Alex None 6422144 @Manteca_de_coco]: /horario
+[27/09/15 19:34:41 Alex None 6422144 @Manteca_de_coco]: Informática
+[27/09/15 20:43:29 Alex None 6422144 @Manteca_de_coco]: /examenes
+[27/09/15 20:43:31 Alex None 6422144 @Manteca_de_coco]: Todos
+[27/09/15 20:51:48 Alex None 6422144 @Manteca_de_coco]: /menu_dia@ETSIITBOT
+[28/09/15 06:31:11 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[28/09/15 06:35:18 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[28/09/15 07:18:32 Alex None 6422144 @Manteca_de_coco]: /horario
+[28/09/15 07:18:36 Alex None 6422144 @Manteca_de_coco]: Telecomunicaciones
+[28/09/15 07:32:19 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[28/09/15 07:32:34 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[28/09/15 08:23:50 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[28/09/15 08:24:26 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[28/09/15 08:24:55 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[28/09/15 08:29:46 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[28/09/15 09:43:04 Alex None 6422144 @Manteca_de_coco]: /localizacion
+[28/09/15 10:58:58 Adrián García Moreno
+AVBDJN1 9935044 @None]: /start
+[28/09/15 10:59:34 Adrián García Moreno
+AVBDJN1 9935044 @None]: /menu_semana
+[28/09/15 10:59:56 Adrián García Moreno
+AVBDJN1 9935044 @None]: /ayuda
+[28/09/15 13:41:01 Diego None 9423178 @lIlllIIIlIlIIl]: /horario
+[28/09/15 13:41:04 Diego None 9423178 @lIlllIIIlIlIIl]: Informática + matemáticas
+[28/09/15 17:01:14 Alex None 6422144 @Manteca_de_coco]: Día
+[28/09/15 17:01:54 Alex None 6422144 @Manteca_de_coco]: Día
+[28/09/15 17:10:15 Alex None 6422144 @Manteca_de_coco]: Día
+[28/09/15 17:10:49 Alex None 6422144 @Manteca_de_coco]: Semana
+[28/09/15 17:13:11 Alex None 6422144 @Manteca_de_coco]: Semana
+[28/09/15 17:13:25 Alex None 6422144 @Manteca_de_coco]: Dia
+[28/09/15 17:14:15 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[28/09/15 17:14:24 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[28/09/15 17:14:33 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[29/09/15 07:15:20 Alex None 6422144 @Manteca_de_coco]: /horario
+[29/09/15 07:15:23 Alex None 6422144 @Manteca_de_coco]: Informática
+[29/09/15 07:26:09 ACharLuk (Gouji) None 12237762 @ACharLukG]: /examenes
+[29/09/15 07:26:13 ACharLuk (Gouji) None 12237762 @ACharLukG]: Informática
+[29/09/15 07:56:24 Alex None 6422144 @Manteca_de_coco]: /horario
+[29/09/15 07:56:29 Alex None 6422144 @Manteca_de_coco]: Informática
+[29/09/15 13:09:32 Alex None 6422144 @Manteca_de_coco]: /examenes
+[29/09/15 13:09:33 Alex None 6422144 @Manteca_de_coco]: Informática
+[29/09/15 13:24:33 Jairo Luisiyoo😎 132982030 @None]: /start
+[29/09/15 13:36:37 ACharLuk (Gouji) None 12237762 @ACharLukG]: /horario
+[29/09/15 13:36:46 ACharLuk (Gouji) None 12237762 @ACharLukG]: Informática + matemáticas
+[29/09/15 13:37:14 ACharLuk (Gouji) None 12237762 @ACharLukG]: /examenes
+[29/09/15 13:37:23 ACharLuk (Gouji) None 12237762 @ACharLukG]: Todos
+[29/09/15 20:13:50 Alex None 6422144 @Manteca_de_coco]: /web
+[30/09/15 10:15:00 Alex None 6422144 @Manteca_de_coco]: /horario
+[30/09/15 10:15:06 Alex None 6422144 @Manteca_de_coco]: Informática
+[30/09/15 10:15:35 Alex None 6422144 @Manteca_de_coco]: /horario
+[30/09/15 10:15:37 Alex None 6422144 @Manteca_de_coco]: Telecomunicaciones
+[30/09/15 10:15:50 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[30/09/15 10:16:10 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[30/09/15 12:48:05 Alex None 6422144 @Manteca_de_coco]: /horario
+[30/09/15 12:48:06 Alex None 6422144 @Manteca_de_coco]: Informática
+[30/09/15 17:43:15 Alex None 6422144 @Manteca_de_coco]: /horario
+[30/09/15 17:43:21 Alex None 6422144 @Manteca_de_coco]: Telecomunicaciones
+[01/10/15 10:24:26 Alex None 6422144 @Manteca_de_coco]: /horario
+[01/10/15 10:24:27 Alex None 6422144 @Manteca_de_coco]: Informática
+[01/10/15 11:43:18 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[01/10/15 15:45:01 Alberto None 1450562 @ManiaquePUTOAMO]: /start
+[01/10/15 15:45:03 Alberto None 1450562 @ManiaquePUTOAMO]: /horario
+[01/10/15 15:45:06 Alberto None 1450562 @ManiaquePUTOAMO]: Informática
+[02/10/15 09:21:54 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[02/10/15 09:22:11 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[02/10/15 12:31:48 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[02/10/15 12:31:55 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[02/10/15 12:32:24 Alex None 6422144 @Manteca_de_coco]: /horario
+[02/10/15 12:32:27 Alex None 6422144 @Manteca_de_coco]: Informática
+[03/10/15 19:47:39 Alex None 6422144 @Manteca_de_coco]: /web
+[05/10/15 12:15:30 Mariano Palomo 10963136 @mpv_prod]: /menu_semana
+[05/10/15 12:15:30 Mariano Palomo 10963136 @mpv_prod]: /menu_dia
+[05/10/15 12:15:30 Andrés Ortiz 4913114 @andresortiz]: /menu_dia
+[05/10/15 12:15:59 Mariano Palomo 10963136 @mpv_prod]: /menu_dia
+[05/10/15 13:29:31 Alex None 6422144 @Manteca_de_coco]: /web
+[05/10/15 14:51:47 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[05/10/15 15:56:36 Alex None 6422144 @Manteca_de_coco]: /horario
+[05/10/15 15:56:37 Alex None 6422144 @Manteca_de_coco]: Informática
+[06/10/15 08:27:26 Nacho Romero 10293541 @Nachobit]: /start
+[06/10/15 08:28:08 Nacho Romero 10293541 @Nachobit]: /horario
+[06/10/15 08:28:10 Nacho Romero 10293541 @Nachobit]: Informática
+[06/10/15 08:28:34 Nacho Romero 10293541 @Nachobit]: /menu_dia
+[06/10/15 09:36:29 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[06/10/15 10:49:52 Diego None 9423178 @lIlllIIIlIlIIl]: /horario
+[06/10/15 10:49:55 Diego None 9423178 @lIlllIIIlIlIIl]: Informática
+[06/10/15 11:17:40 Diego None 9423178 @lIlllIIIlIlIIl]: /menu_dia
+[06/10/15 21:11:30 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[07/10/15 06:17:02 Enrique None 9207080 @nRaiker]: /start
+[07/10/15 06:17:08 Enrique None 9207080 @nRaiker]: /horario
+[07/10/15 06:17:10 Enrique None 9207080 @nRaiker]: Informática
+[07/10/15 09:36:35 Alberto None 1450562 @ManiaquePUTOAMO]: /menu_dia
+[08/10/15 07:59:30 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[08/10/15 10:15:33 Alex None 6422144 @Manteca_de_coco]: /horario
+[08/10/15 10:15:34 Alex None 6422144 @Manteca_de_coco]: Informática
+[08/10/15 17:12:26 Alberto None 6778181 @alb211]: /start
+[08/10/15 17:12:38 Alberto None 6778181 @alb211]: /horario
+[08/10/15 17:12:43 Alberto None 6778181 @alb211]: Telecomunicaciones
+[08/10/15 17:13:13 rogama None 22784456 @rogama25]: /start
+[09/10/15 12:01:18 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[09/10/15 12:01:30 Alex None 6422144 @Manteca_de_coco]: /web
+[09/10/15 12:01:35 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[09/10/15 12:01:51 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[09/10/15 12:02:52 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[09/10/15 12:05:41 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[09/10/15 14:24:38 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[09/10/15 14:27:00 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[09/10/15 14:29:38 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[09/10/15 14:30:00 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[09/10/15 14:30:44 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[09/10/15 14:31:39 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[09/10/15 14:32:17 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[09/10/15 14:34:05 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[09/10/15 14:37:21 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[09/10/15 14:39:03 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[09/10/15 14:39:24 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[09/10/15 14:39:53 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[09/10/15 14:41:43 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[09/10/15 14:42:26 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[09/10/15 14:44:47 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[09/10/15 14:58:246422144 @Manteca_de_coco]: /web
+[09/10/15 14:59:04 6422144 @Manteca_de_coco]: /web
+[09/10/15 14:59:30 id:6422144 @Manteca_de_coco]: /web
+[09/10/15 16:25:45 id:6422144 @Manteca_de_coco]: /menu_dia
+[09/10/15 19:22:45 id:6422144 @Manteca_de_coco]: /web
+[10/10/15 10:23:25 id:6422144 @Manteca_de_coco]: /web
+[10/10/15 18:28:14 id:6422144 @Manteca_de_coco]: /menu_semana
+[12/10/15 13:05:13 id:6422144 @Manteca_de_coco]: /web
+[12/10/15 15:30:51 Alex None 6422144 @Manteca_de_coco]: /web
+[12/10/15 17:49:33 Alex None 6422144 @Manteca_de_coco]: /web
+[13/10/15 06:36:15 Alex None 6422144 @Manteca_de_coco]: /horario
+[13/10/15 06:36:20 Alex None 6422144 @Manteca_de_coco]: Informática
+[13/10/15 09:32:43 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[13/10/15 09:32:59 Alex None 6422144 @Manteca_de_coco]: /horario
+[13/10/15 09:33:00 Alex None 6422144 @Manteca_de_coco]: Telecomunicaciones
+[13/10/15 11:34:56 Andrés Ortiz 4913114 @andresortiz]: /examenes
+[13/10/15 11:35:02 Andrés Ortiz 4913114 @andresortiz]: Informática
+[13/10/15 11:38:11 Jose None 3572814 @joseASM]: /start
+[13/10/15 11:39:10 Jose None 3572814 @joseASM]: /examenes
+[13/10/15 11:39:12 Jose None 3572814 @joseASM]: Informática
+[13/10/15 11:39:18 Jose None 3572814 @joseASM]: /examenes
+[13/10/15 11:39:20 Jose None 3572814 @joseASM]: Informática
+[13/10/15 11:39:26 Jose None 3572814 @joseASM]: /localizacion
+[13/10/15 11:39:32 Jose None 3572814 @joseASM]: /menu_dia
+[13/10/15 11:39:46 Jose None 3572814 @joseASM]: /ayuda
+[13/10/15 11:39:54 Jose None 3572814 @joseASM]: /horario
+[13/10/15 11:39:57 Jose None 3572814 @joseASM]: Informática
+[13/10/15 13:33:13 Jose None 3572814 @joseASM]: /web
+[13/10/15 13:33:19 Jose None 3572814 @joseASM]: /localizacion
+[13/10/15 13:33:22 Jose None 3572814 @joseASM]: /menu_dia
+[13/10/15 13:33:35 Jose None 3572814 @joseASM]: /horario
+[13/10/15 13:33:36 Jose None 3572814 @joseASM]: Informática
+[13/10/15 14:20:56 Koltharius None 4292151 @Koltharius]: /start
+[13/10/15 14:21:09 Koltharius None 4292151 @Koltharius]: /menu_dia
+[13/10/15 14:21:27 Koltharius None 4292151 @Koltharius]: /menu_dia
+[13/10/15 15:11:15 Koltharius None 4292151 @Koltharius]: /ayuda
+[13/10/15 15:11:22 Koltharius None 4292151 @Koltharius]: /contacto
+[13/10/15 15:11:31 Koltharius None 4292151 @Koltharius]: /localizacion
+[13/10/15 17:36:13 Mariano Palomo 10963136 @mpv_prod]: /menu_dia
+[13/10/15 17:36:42 Mariano Palomo 10963136 @mpv_prod]: /menu_dia
+[14/10/15 09:04:06 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[14/10/15 09:04:16 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[14/10/15 19:34:58 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[15/10/15 15:07:13 David Sánchez Jiménez 4292151 @Koltharius]: /start
+[15/10/15 15:07:18 David Sánchez Jiménez 4292151 @Koltharius]: /examenes
+[15/10/15 15:07:20 David Sánchez Jiménez 4292151 @Koltharius]: Informática
+[15/10/15 18:52:38 David Sánchez Jiménez 4292151 @Koltharius]: /menu_dia
+[15/10/15 18:52:58 David Sánchez Jiménez 4292151 @Koltharius]: /menu_semana
+[16/10/15 07:42:11 Mariano Palomo 10963136 @mpv_prod]: /examenes
+[16/10/15 07:42:15 Mariano Palomo 10963136 @mpv_prod]: Informática
+[16/10/15 08:56:53 David Sánchez Jiménez 4292151 @Koltharius]: /menu_dia
+[16/10/15 08:57:12 David Sánchez Jiménez 4292151 @Koltharius]: /menu_semana
+[16/10/15 10:24:15 Mariano Palomo 10963136 @mpv_prod]: /menu_dia
+[16/10/15 10:41:38 Alex None 6422144 @Manteca_de_coco]: /web
+[16/10/15 10:51:41 Alex None 6422144 @Manteca_de_coco]: /web
+[16/10/15 10:51:41 Alex None 6422144 @Manteca_de_coco]: /web
+[16/10/15 11:26:29 Alex None 6422144 @Manteca_de_coco]: /start
+[16/10/15 11:26:29 Alex None 6422144 @Manteca_de_coco]: /web
+[16/10/15 11:28:21 Alex None 6422144 @Manteca_de_coco]: /web
+[16/10/15 11:28:26 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[16/10/15 11:29:44 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[16/10/15 11:29:54 Alex None 6422144 @Manteca_de_coco]: /horario
+[16/10/15 11:30:58 Alex None 6422144 @Manteca_de_coco]: /horario
+[16/10/15 11:31:24 Alex None 6422144 @Manteca_de_coco]: /horario
+[16/10/15 11:32:58 Alex None 6422144 @Manteca_de_coco]: /horario
+[16/10/15 11:34:20 Alex None 6422144 @Manteca_de_coco]: /examenes
+[16/10/15 11:35:39 Alex None 6422144 @Manteca_de_coco]: /examenes
+[16/10/15 11:35:48 Alex None 6422144 @Manteca_de_coco]: /horario
+[16/10/15 11:36:02 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[16/10/15 11:42:58 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[16/10/15 17:06:06 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[17/10/15 12:40:55 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[18/10/15 15:27:27 Israel Blancas 2943154 @iblancasa]: /start
+[18/10/15 16:39:20 Israel Blancas 2943154 @iblancasa]: /horario
+[18/10/15 16:40:03 Israel Blancas 2943154 @iblancasa]: /menu_semana
+[19/10/15 06:28:51 Alex None 6422144 @Manteca_de_coco]: /horario
+[19/10/15 07:47:01 Óscar Bermúdez Garrido 98167426 @oxcar103]: /start
+[19/10/15 07:47:29 Óscar Bermúdez Garrido 98167426 @oxcar103]: /menu_semana
+[19/10/15 07:48:32 Óscar Bermúdez Garrido 98167426 @oxcar103]: /ayuda
+[19/10/15 07:48:35 Óscar Bermúdez Garrido 98167426 @oxcar103]: /ayuda
+[19/10/15 07:55:42 Óscar Bermúdez Garrido 98167426 @oxcar103]: /horario
+[19/10/15 07:55:59 Óscar Bermúdez Garrido 98167426 @oxcar103]: /horario
+[19/10/15 07:56:24 Óscar Bermúdez Garrido 98167426 @oxcar103]: /horario
+[19/10/15 07:56:42 Óscar Bermúdez Garrido 98167426 @oxcar103]: /examenes
+[19/10/15 07:56:59 Óscar Bermúdez Garrido 98167426 @oxcar103]: /localizacion
+[19/10/15 07:57:11 Óscar Bermúdez Garrido 98167426 @oxcar103]: /menu_dia
+[19/10/15 07:57:21 Óscar Bermúdez Garrido 98167426 @oxcar103]: /ayuda
+[19/10/15 07:59:23 Óscar Bermúdez Garrido 98167426 @oxcar103]: /web
+[19/10/15 07:59:31 Óscar Bermúdez Garrido 98167426 @oxcar103]: /contacto
+[19/10/15 08:06:26 Alex None 6422144 @Manteca_de_coco]: /ayuda
+[19/10/15 08:07:15 Alex None 6422144 @Manteca_de_coco]: /ayuda
+[19/10/15 08:08:09 Alex None 6422144 @Manteca_de_coco]: /ayuda
+[19/10/15 08:09:30 Óscar Bermúdez Garrido 98167426 @oxcar103]: /ayuda
+[19/10/15 08:25:58 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[19/10/15 08:40:40 David Sánchez Jiménez 4292151 @Koltharius]: /menu_dia
+[19/10/15 09:11:29 Nacho Romero 10293541 @Nachobit]: /menu_dia
+[19/10/15 10:23:11 Roberto None 4782501 @None]: /start
+[19/10/15 10:23:19 Roberto None 4782501 @None]: /ayuda
+[19/10/15 10:23:28 Roberto None 4782501 @None]: /examenes
+[19/10/15 10:23:55 Roberto None 4782501 @None]: /menu_dia
+[19/10/15 10:24:14 Roberto None 4782501 @None]: /menu_semana
+[19/10/15 10:25:02 Roberto None 4782501 @None]: /localizacion
+[19/10/15 10:26:42 Roberto None 4782501 @None]: /menu_semana
+[19/10/15 10:33:19 Roberto None 4782501 @None]: /examenes
+[19/10/15 10:35:15 Roberto None 4782501 @None]: /horario
+[19/10/15 10:35:22 Óscar Bermúdez Garrido 98167426 @oxcar103]: /horario
+[19/10/15 10:35:39 Roberto None 4782501 @None]: /menu_dia
+[19/10/15 10:35:47 Roberto None 4782501 @None]: /horario
+[19/10/15 10:36:31 Óscar Bermúdez Garrido 98167426 @oxcar103]: /ayuda
+[19/10/15 11:34:49 German Martinez 40719848 @germaaan]: /start
+[19/10/15 11:34:56 German Martinez 40719848 @germaaan]: /menu_dia
+[19/10/15 12:13:15 Mariano Palomo 10963136 @mpv_prod]: /menu_dia
+[19/10/15 12:40:05 Roberto None 4782501 @None]: /menu_dia
+[19/10/15 12:40:05 Roberto None 4782501 @None]: /menu_dia
+[19/10/15 12:44:02 Alex None 6422144 @Manteca_de_coco]: /web
+[19/10/15 12:48:13 Alex None 6422144 @Manteca_de_coco]: /web
+[19/10/15 13:01:42 Alex None 6422144 @Manteca_de_coco]: /web
+[19/10/15 13:03:19 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[19/10/15 18:13:34 Alex None 6422144 @Manteca_de_coco]: /ayuda
+[19/10/15 22:17:08 Roberto None 4782501 @None]: /ayuda
+[19/10/15 22:39:01 Juanjo Jiménez 2800074 @Juanji05]: /start
+[19/10/15 22:39:21 Juanjo Jiménez 2800074 @Juanji05]: /menu_dia
+[19/10/15 22:39:35 Juanjo Jiménez 2800074 @Juanji05]: /menu_dia
+[19/10/15 22:39:42 Juanjo Jiménez 2800074 @Juanji05]: /menu_semana
+[19/10/15 22:39:54 Juanjo Jiménez 2800074 @Juanji05]: /examenes
+[19/10/15 22:40:06 Juanjo Jiménez 2800074 @Juanji05]: /horario
+[19/10/15 22:40:23 Juanjo Jiménez 2800074 @Juanji05]: /localizacion
+[19/10/15 22:40:32 Juanjo Jiménez 2800074 @Juanji05]: /ayuda
+[20/10/15 05:58:51 Roberto None 4782501 @None]: /menu_dia
+[20/10/15 06:16:00 David Sánchez Jiménez 4292151 @Koltharius]: /menu_dia
+[20/10/15 06:16:39 David Sánchez Jiménez 4292151 @Koltharius]: /menu_semana
+[20/10/15 07:24:52 Alex None 6422144 @Manteca_de_coco]: /horario
+[20/10/15 11:44:46 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[20/10/15 11:44:57 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[20/10/15 16:47:56 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[20/10/15 16:48:24 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[20/10/15 16:48:30 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[20/10/15 16:53:30 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[20/10/15 16:54:47 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[20/10/15 16:56:09 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[20/10/15 16:57:15 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[20/10/15 16:57:37 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[20/10/15 16:59:30 Alex None 6422144 @Manteca_de_coco]: /menu_dia
+[20/10/15 16:59:38 Alex None 6422144 @Manteca_de_coco]: /menu_semana
+[20/10/15 17:00:22 Alex None 6422144 @Manteca_de_coco]: /horario
+[20/10/15 17:02:02 Alex None 6422144 @Manteca_de_coco]: /horario
+[20/10/15 17:03:18 Alex None 6422144 @Manteca_de_coco]: /horario
+[20/10/15 17:03:30 Alex None 6422144 @Manteca_de_coco]: /examenes
+[20/10/15 17:04:39 Alex None 6422144 @Manteca_de_coco]: /horario
+[20/10/15 17:05:02 Alex None 6422144 @Manteca_de_coco]: /horario
+[20/10/15 17:05:31 Alex None 6422144 @Manteca_de_coco]: /examenes
+[20/10/15 17:08:01 Alex None 6422144 @Manteca_de_coco]: /examenes
+[20/10/15 17:10:42 Alex None 6422144 @Manteca_de_coco]: /web
+[20/10/15 17:13:17 Alex None 6422144 @Manteca_de_coco]: /web

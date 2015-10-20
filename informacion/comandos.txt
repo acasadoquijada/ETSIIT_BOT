@@ -1,0 +1,27 @@
+horario - Horario del curso 2015/2016
+examenes - Exámenes del curso 2015/2016
+localizacion - Localización de la escuela en google maps
+web - Página de la escuela
+contacto - Información de contacto de la escuela
+menu_semana - Menú de la semana de los comedores de la ugr
+menu_dia - Menú del día seleccionado
+ayuda - Información detallada de las funciones
+
+
+
+
+Bot no oficial de la E.T.S.I.I.T de la universidad de Granada
+
+Estoy aqui para ofrecerte todo tipo de información sobre la escuela:
+
+Examenes de cada una de los grados
+
+Horarios de cada uno de los grados
+
+Localización de la escuela en Google Maps
+
+Menu semanal de los comedores universitarios
+
+Entre otras funciones
+
+Repositorio: https://github.com/acasadoquijada/ETSIIT_BOT
