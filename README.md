@@ -48,6 +48,38 @@ ETSIITBOT cuenta con los siguientes módulos:
 * registros.py - Funciones relacionadas con el registro de actividad y excepciones
 * teclados.py - Creación de teclados
 
+##Ficheros
+
+Los ficheros usados tienen la siguiente estructura:
+
+    |-- Bot
+    |   |-- ayuda_pasiva.py
+    |   |-- bot.py
+    |   |-- etsiit_bot.py
+    |   |-- funciones_auxiliares.py
+    |   |-- menu.py
+    |   |-- registros.py
+    |   |-- teclados.py      
+    |-- Horarios
+    |   |-- horarios_gii.pdf
+    |   |-- horarios_gim.pdf
+    |   |-- horarios_git.pdf
+    |-- examenes
+    |   |-- examenes.pdf
+    |   |-- examenes_gii.pdf
+    |   |-- examenes_gitt.pdf
+    |-- informacion
+        |-- ayuda.txt
+        |-- ayuda_pasiva_examenes.txt
+        |-- ayuda_pasiva_horario.txt
+        |-- ayuda_pasiva_menu.txt
+        |-- comandos.txt
+        |-- conf.py
+        |-- registro.txt
+        |-- start.txt
+        
+Algunos de los ficheros, como los examenes, horarios y registros no han sido subidos al repositorio por temas de limpieza y privacidad
+   
 
 ##Contacto
 acasadoquijada@gmail.com
