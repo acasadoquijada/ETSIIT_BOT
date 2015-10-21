@@ -1,4 +1,4 @@
-from bot import bot
+from bot import *
 import os.path
 from teclados import *
 import urllib.request, urllib.parse, urllib.error
@@ -97,3 +97,11 @@ def aux_examenes(m):
     
     grado = str(m.text)
     mandar_examenes(grado,m)
+    
+# Comprueba el tiempo del mensaje y el de arranque del bot, para evitar
+# enviar mensajes que el bot recibio estando apagado
+def check_time(m):
+    if tiempo_arranque > m.date:
+        return False
+    else:
+        return True

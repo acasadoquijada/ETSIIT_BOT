@@ -7,6 +7,9 @@ Nombre del bot: @ETSIITBOT
 
 Por motivos de privacidad de los usuarios el bot no puede ser incluido en grupos.
 
+El bot esta almacenado en [c9](https://c9.io/) de manera gratuita por lo que puede pasar que pase a hibernar automáticamente
+si no recibe peticiones en varios días
+
 
 ##Funcionalidades
 
@@ -24,6 +27,9 @@ Tras seleccionar el grado del que queramos el horario ETSIITBOT nos lo enviará
 ![Captura3](http://i1045.photobucket.com/albums/b460/Alejandro_Casado/ETSIITBOT/horario2_zpsmpepeu9a.png)
 
 Esta interacción esta disponible para elegir el horario, los examenes y el menú de un dia concreto
+
+Antes el bot respondia a los mensajes recibidos cuando estaba apagado, lo que podía ser molesto, ahora solo
+responde a aquellos mensajes que reciba cuando este operativo.
 
 ##Comandos
 
