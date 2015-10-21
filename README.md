@@ -33,26 +33,26 @@ responde a aquellos mensajes que reciba cuando este operativo.
 
 ##Comandos
 
-* /horario - Ofrece los diferentes horarios a traves de un teclado
-* /examenes - Proporciona los examenes del curso 2015/2016 para todos los grados.
-* /localizacion - Localización de la escuela en google maps.
-* /contacto - Información de contacto de la escuela.
-* /web - Web de la escuela
-* /menu_semana - Menú de la semada de los comedores de la ugr
-* /menu_dia - Menú del día seleccionado
-* /ayuda - Información detallada sobre las funciones.
+* */horario* - Ofrece los diferentes horarios a traves de un teclado
+* */examenes* - Proporciona los examenes del curso 2015/2016 para todos los grados.
+* */localizacion* - Localización de la escuela en google maps.
+* */contacto* - Información de contacto de la escuela.
+* */web* - Web de la escuela
+* */menu_semana* - Menú de la semada de los comedores de la ugr
+* */menu_dia* - Menú del día seleccionado
+* */ayuda* - Información detallada sobre las funciones.
 
 ##Estructura
 
 ETSIITBOT cuenta con los siguientes módulos:
 
-* ayuda_pasiva.py - Se encarga de la gestión de la ayuda pasiva
-* bot.py - Crea el bot
-* etsiit_bot - "Cuerpo" del bot, donde se definen los comandos a los que reacciona
-* funciones_auxiliares.py - Una serie de funciones auxiliares usadas por el bot
-* menu.py - Gestiona la obtención del menú de comedores
-* registros.py - Funciones relacionadas con el registro de actividad y excepciones
-* teclados.py - Creación de teclados
+* *ayuda_pasiva.py* - Se encarga de la gestión de la ayuda pasiva
+* *bot.py* - Crea el bot
+* *etsiit_bot* - "Cuerpo" del bot, donde se definen los comandos a los que reacciona
+* *funciones_auxiliares.py* - Una serie de funciones auxiliares usadas por el bot
+* *menu.py* - Gestiona la obtención del menú de comedores
+* *registros.py* - Funciones relacionadas con el registro de actividad y excepciones
+* *teclados.py* - Creación de teclados
 
 ##Ficheros
 
@@ -85,6 +85,7 @@ Los ficheros usados tienen la siguiente estructura:
         |-- start.txt
         
 Algunos de los ficheros, como los examenes, horarios y registros no han sido subidos al repositorio por temas de limpieza y privacidad
+Para crear el arbol de directorios he usado [mddir](https://www.npmjs.com/package/mddir)
    
 
 ##Contacto
