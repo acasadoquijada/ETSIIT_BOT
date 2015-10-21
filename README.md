@@ -34,7 +34,7 @@ responde a aquellos mensajes que reciba cuando este operativo.
 ##Comandos
 
 * **/horario** - Ofrece los diferentes horarios a traves de un teclado
-* **/examene*s* - Proporciona los examenes del curso 2015/2016 para todos los grados.
+* **/examenes** - Proporciona los examenes del curso 2015/2016 para todos los grados.
 * **/localizacion** - Localización de la escuela en google maps.
 * **/contacto** - Información de contacto de la escuela.
 * **/web** - Web de la escuela
