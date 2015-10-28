@@ -7,6 +7,6 @@ setup(name='ETSIITBOT',
 	author='Alejandro Casado Quijada',
 	author_email='acasadoquijada@gmail.com',
 	license='GNU GPL',
-	packages=['ETSIITBOT'],
+	#packages=['ETSIITBOT'],
 	install_requires=['beautifulsoup4','py','pyTelegramBotAPI','pytest','requests','six','wheel'],
 	zip_safe=False)
