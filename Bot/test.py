@@ -19,8 +19,9 @@ class TestTeleBot():
     def test_localizacion(self):
       
         tb = telebot.TeleBot(TOKEN)
-        lat = 26.3875591
-        lon = -161.2901042
+        lat = 37.196689
+        lon = -3.624534
         ret_msg = tb.send_location(CHAT_ID, lat, lon)
         assert int(ret_msg.location.longitude) == int(lon)
         assert int(ret_msg.location.latitude) == int(lat)
+        print("Test localizacion pasado con exito")
