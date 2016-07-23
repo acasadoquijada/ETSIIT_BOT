@@ -87,7 +87,8 @@ Los ficheros usados tienen la siguiente estructura:
 Algunos de los ficheros, como los examenes, horarios y registros no han sido subidos al repositorio por temas de limpieza y privacidad
 
 Para crear el arbol de directorios he usado [mddir](https://www.npmjs.com/package/mddir)
-   
+
+**IMPORTANTE** Es necesario crear un archivo conf.py en la carpeta Bot con un string llamado token que corresponde al token necesario para acceder a la API de Telegram.
 
 ##Contacto
 acasadoquijada@gmail.com
