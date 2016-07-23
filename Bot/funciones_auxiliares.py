@@ -26,58 +26,49 @@ def enviar_archivo(m,archivo):
 def mandar_horario(grado,m):
 
     try:
-        path = '../docs/'
+
+        url = ''
 
         if grado == 'Informática':
-            nombre_fichero = 'horariosgii1617definitivos.pdf'
             url = link_horario_gii
 
         elif grado == 'Telecomunicaciones':
-            nombre_fichero = 'horariosgitt1617definitivos.pdf'
             url = link_horario_gitt
 
         elif grado == 'Informática + matemáticas':
-            nombre_fichero = 'horariosgim1617definitivos.pdf'
             url = link_horario_gim
 
 
-        #Si el pdf no esta descargado
-        if not os.path.isfile(path + nombre_fichero):
-            #Lo descargamos
-            urllib.request.urlretrieve(url, path + nombre_fichero)
-
         #Enviar el archivo
-        enviar_archivo(m,path + nombre_fichero)
+        bot.send_message(m.chat.id,url)
 
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
-        print(str(e))
         #exception_log(e,m)
 
 # Comprobamos si existe el horario y se actua en consecuencia
 def mandar_examenes(grado,m):
 
-    try:
-        path = '../examenes/'
-        nombre_fichero = ''
+    path = '../archivos/'
+    nombre_fichero = ''
 
+    try:
 
         if grado == 'Informática':
-            nombre_fichero += 'examenes_gii.pdf'
+            nombre_fichero = 'calendarioexamenes1617gii.pdf'
+            url = link_horario_gii
 
         elif grado == 'Telecomunicaciones':
-            nombre_fichero += 'examenes_gitt.pdf'
+            nombre_fichero = 'calendarioexamenes1617gitt.pdf'
+            url = link_horario_gitt
 
-        elif grado == 'Todos':
-            nombre_fichero += 'examenes.pdf'
+        elif grado == 'Informática + matemáticas':
+            nombre_fichero = 'calendarioexamenes1617gim.pdf'
+            url = link_horario_gim
 
 
-        if os.path.isfile(path + nombre_fichero):
-
-            enviar_archivo(m,path+nombre_fichero)
-
-        else:
-            bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
+        #Enviar el archivo
+        bot.send_message(m.chat.id,url)
 
 
     except Exception as e:

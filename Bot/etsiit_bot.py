@@ -14,6 +14,7 @@ from funciones_auxiliares import *
 from ayuda_pasiva import *
 from registros import *
 from bot import bot
+from links import *
 
 
 ############
@@ -78,7 +79,7 @@ def horario(m):
         exception_log(e,m)
 
 
-# Función encargada de dar el horario
+# Función encargada de dar el calendario de examenes
 @bot.message_handler(commands=['examenes'])
 def examenes(m):
 
@@ -187,8 +188,6 @@ def menu_dia(m):
 
         msg = bot.send_message(cid,texto, reply_markup=teclado_menu)
 
-
-
         bot.register_next_step_handler(msg, aux_menu_dia)
 
     except Exception as e:
@@ -204,20 +203,12 @@ def obtener_calendario(m):
 
         cid = m.chat.id
 
-        path = '../docs/'
-        nombre_fichero = 'calendario1617.pdf'
-        url = 'http://secretariageneral.ugr.es/pages/calendariogrado20162017/!'
-
-        #Si el pdf no esta descargado
-        if not os.path.isfile(path + nombre_fichero):
-            #Lo descargamos
-            urllib.request.urlretrieve(url, path + nombre_fichero)
+        url = link_calendario
 
         #Enviar el archivo
-        enviar_archivo(m,path + nombre_fichero)
+        bot.send_message(cid,url)
 
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
-
 
 bot.polling(none_stop=True)

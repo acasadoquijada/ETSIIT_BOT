@@ -87,3 +87,6 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Archivo de configuracion (token)
+Bot/conf.py
