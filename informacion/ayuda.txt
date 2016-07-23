@@ -16,5 +16,7 @@ Estas son las funciones de las que dispongo:
 
 /menu_dia - Menu del dia seleccionado
 
+/calendario - Calendario academico del curso actual
+
 Contacto: acasadoquijada@gmail.com
 Repositorio: https://github.com/acasadoquijada/ETSIIT_BOT

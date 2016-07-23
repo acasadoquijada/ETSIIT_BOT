@@ -14,7 +14,7 @@ teclado_horario.add('Informática', 'Telecomunicaciones', 'Informática + matem�
 
 # Teclado para elegir los examenes
 teclado_examenes = types.ReplyKeyboardMarkup(one_time_keyboard=True,resize_keyboard=True,selective=True)
-teclado_examenes.add('Informática', 'Telecomunicaciones', 'Todos')
+teclado_examenes.add('Informática', 'Telecomunicaciones', 'Informática + matemáticas')
 
 # Ocultamos el teclado
 hideBoard = types.ReplyKeyboardHide()
