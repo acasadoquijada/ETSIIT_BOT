@@ -40,7 +40,7 @@ def mandar_horario(grado,m):
 
 
         #Enviar el archivo
-        bot.send_message(m.chat.id,url)
+        bot.send_message(m.chat.id,url,reply_markup=hideBoard)
 
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
@@ -68,7 +68,7 @@ def mandar_examenes(grado,m):
 
 
         #Enviar el archivo
-        bot.send_message(m.chat.id,url)
+        bot.send_message(m.chat.id,url, reply_markup=hideBoard)
 
 
     except Exception as e:
