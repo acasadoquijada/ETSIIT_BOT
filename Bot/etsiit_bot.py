@@ -8,13 +8,15 @@ import requests
 import re
 import os.path,sys #cookielib, os.path, time,
 import urllib.request, urllib.parse, urllib.error
-from menu import *
+#from menu import *
 from teclados import *
 from funciones_auxiliares import *
 from ayuda_pasiva import *
 from registros import *
 from bot import bot
-from links import *
+from pycomedoresugr import *
+
+
 
 
 ############
@@ -23,7 +25,7 @@ from links import *
 
 def listener(messages):
     for m in messages:
-        ayuda_pasiva(m)
+        log(m)
 
 bot.set_update_listener(listener)
 
@@ -35,7 +37,7 @@ bot.set_update_listener(listener)
 @bot.message_handler(commands=['start'])
 def start(m):
 
-    log(m)
+    #log(m)
 
     cid = m.chat.id
 
@@ -51,7 +53,7 @@ def start(m):
 @bot.message_handler(commands=['ayuda'])
 def ayuda(m):
 
-    log(m)
+    #log(m)
 
     cid = m.chat.id
 
@@ -68,7 +70,7 @@ def ayuda(m):
 def horario(m):
 
     try:
-        log(m)
+        #log(m)
         cid = m.chat.id
         texto = "Elige el grado"
         msg = bot.send_message(cid,texto, reply_markup=teclado_horario)
@@ -84,7 +86,7 @@ def horario(m):
 def examenes(m):
 
     try:
-        log(m)
+        #log(m)
         cid = m.chat.id
 
         texto = "Elige el grado"
@@ -100,7 +102,7 @@ def examenes(m):
 @bot.message_handler(commands=['contacto'])
 def contacto(m):
 
-    log(m)
+    #log(m)
 
     cid = m.chat.id
 
@@ -115,7 +117,7 @@ def contacto(m):
 def obtener_localizacion(m):
 
     try:
-        log(m)
+        #log(m)
 
         cid = m.chat.id
 
@@ -130,7 +132,7 @@ def obtener_localizacion(m):
 def obtener_web(m):
 
     try:
-        log(m)
+        #log(m)
 
         cid = m.chat.id
         mensaje = 'Aquí tienes la web de la ETSIIT: '
@@ -144,11 +146,11 @@ def obtener_web(m):
 
 #Obtiene y envia menú
 @bot.message_handler(commands=['menu_semana'])
-def menu_semana(m):
+def obtener_menu_semana(m):
 
     try:
 
-        log(m)
+        #log(m)
 
         cid = m.chat.id
 
@@ -177,10 +179,10 @@ def menu_semana(m):
 
 #Obtiene y envia menú del dia seleccionado
 @bot.message_handler(commands=['menu_dia'])
-def menu_dia(m):
+def obtener_menu_dia(m):
     try:
 
-        log(m)
+        #log(m)
 
         cid = m.chat.id
 
@@ -194,21 +196,53 @@ def menu_dia(m):
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
         exception_log(e,m)
 
+
+#Obtiene y envia menú del dia de hoy
+@bot.message_handler(commands=['menu_hoy'])
+def obtener_menu_hoy(m):
+    try:
+
+        #log(m)
+
+        cid = m.chat.id
+
+        menu = menu_dia()
+        menu = " ".join(menu)
+
+        #Si el dia es domingo devuelve ""
+        if menu != "":
+            bot.send_message(m.chat.id,menu, reply_markup=hideBoard)
+        else:
+            bot.send_message(m.chat.id,"Los domingos no está abierto el comedor", reply_markup=hideBoard)
+
+    except Exception as e:
+        bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
+        exception_log(e,m)
+
 # Envia calendario academico
 @bot.message_handler(commands=['calendario'])
 def obtener_calendario(m):
 
     try:
-        log(m)
+        #log(m)
 
-        cid = m.chat.id
-
-        url = link_calendario
-
-        #Enviar el archivo
-        bot.send_message(cid,url)
+        mandar_calendario(m)
 
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
 
-bot.polling(none_stop=True)
+
+def main_loop():
+    #Comprueba si es un mensaje antiguo para no ejecutarlo
+    bot.skip_pending = True
+    bot.polling(True)
+    while 1:
+        time.sleep(3)
+
+
+if __name__ == '__main__':
+    try:
+        main_loop()
+    except KeyboardInterrupt:
+        print('\nExiting by user request.\n', file=sys.stderr)
+        sys.exit(0)
