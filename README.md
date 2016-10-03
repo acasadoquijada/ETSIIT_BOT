@@ -7,10 +7,6 @@ Nombre del bot: @ETSIITBOT
 
 Por motivos de privacidad de los usuarios el bot no puede ser incluido en grupos.
 
-El bot esta almacenado en [c9](https://c9.io/) de manera gratuita por lo que puede pasar que pase a hibernar automáticamente
-si no recibe peticiones en varios días
-
-
 ##Funcionalidades
 
 ETSIITBOT ahora es un poquito mas inteligente, al detectar que buscas el horario, menu o examenes
