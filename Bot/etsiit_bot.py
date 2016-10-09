@@ -154,23 +154,11 @@ def obtener_menu_semana(m):
 
         cid = m.chat.id
 
-        info_dias = obtener_menu()
+        menu = get_menu_semana()
 
-        #Con esto comprobamos que hemos extraido informacion de la web de comedores
-        if(len(info_dias) == 0):
-            bot.reply_to(m,'Hay un error en la web de comedores, intentelo mas tarde')
+        menu = "\n\n".join(menu)
 
-        else:
-            mensaje = "¡Hola!\n\nAquí tienes el menú de la semana, ¡Buen provecho! \n\n"
-
-            for dia in info_dias:
-
-                aux = BeautifulSoup(dia,"lxml") #Sacamos la información de un dia concreto
-
-                mensaje += obtener_menu_dia(aux) #Sacamos el menu de la informacion de dicho dia
-
-            mensaje += "Precio por menú: 3,5€"
-            bot.send_message(cid,mensaje)
+        bot.send_message(cid, menu)
 
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
@@ -230,6 +218,7 @@ def obtener_calendario(m):
 
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
+        exception_log(e,m)
 
 
 def main_loop():

@@ -74,7 +74,7 @@ def mandar_calendario(m):
 
     cid = m.chat.id
 
-    url = link_calendario
+    url = links["link_calendario"]
 
     bot.send_message(cid,url)
 
@@ -98,13 +98,6 @@ def aux_menu_dia(m):
     menu = " ".join(menu)
     bot.send_message(m.chat.id,menu, reply_markup=hideBoard)
 
-#Función auxiliar para devolver el menú de comedores de la semana
-def aux_menu_semana(m):
-
-    dia = str(m.text)
-    menu = menu_dia(dia)
-    menu = " ".join(menu)
-    bot.send_message(m.chat.id,menu, reply_markup=hideBoard)
 
    
 # Comprueba el tiempo del mensaje y el de arranque del bot, para evitar

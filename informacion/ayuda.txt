@@ -16,6 +16,8 @@ Estas son las funciones de las que dispongo:
 
 /menu_dia - Menu del dia seleccionado
 
+/menu_hoy - Menu del dia de hoy
+
 /calendario - Calendario academico del curso actual
 
 Contacto: acasadoquijada@gmail.com
