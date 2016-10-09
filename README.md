@@ -88,7 +88,8 @@ Para crear el arbol de directorios he usado [mddir](https://www.npmjs.com/packag
 
 ##Autores
 ![Alejandro Casado Quijada](https://github.com/acasadoquijada)
-![Diego Granados](https://github.com/diegogran94)
-acasadoquijada@gmail.com
 
+![Diego Granados](https://github.com/diegogran94)
+
+##Licencia
 [Licencia](https://github.com/acasadoquijada/ETSIIT_BOT/blob/master/LICENSE)
