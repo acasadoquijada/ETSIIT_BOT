@@ -86,7 +86,9 @@ Para crear el arbol de directorios he usado [mddir](https://www.npmjs.com/packag
 
 **IMPORTANTE** Es necesario crear un archivo conf.py en la carpeta Bot con un string llamado token que corresponde al token necesario para acceder a la API de Telegram.
 
-##Contacto
+##Autores
+![Alejandro Casado Quijada](https://github.com/acasadoquijada)
+![Diego Granados](https://github.com/diegogran94)
 acasadoquijada@gmail.com
 
 [Licencia](https://github.com/acasadoquijada/ETSIIT_BOT/blob/master/LICENSE)
