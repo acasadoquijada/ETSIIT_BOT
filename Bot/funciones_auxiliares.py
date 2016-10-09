@@ -2,9 +2,11 @@ from bot import *
 import os.path
 from teclados import *
 import urllib.request, urllib.parse, urllib.error
+from pycomedoresugr import *
 
-#Links horarios
-from links import *
+#Lee el fichero donde se almacenan los links y se cargan en un diccionario
+with open('../informacion/links.json', encoding='utf-8') as data_file:
+    links = json.loads(data_file.read())
 
 ########################
 # Funciones auxiliares #
@@ -30,17 +32,17 @@ def mandar_horario(grado,m):
         url = ''
 
         if grado == 'Informática':
-            url = link_horario_gii
+            url = links["link_horario_gii"]
 
         elif grado == 'Telecomunicaciones':
-            url = link_horario_gitt
+            url = links["link_horario_gitt"]
 
         elif grado == 'Informática + matemáticas':
-            url = link_horario_gim
+            url = links["link_horario_gim"]
 
 
         #Enviar el archivo
-        bot.send_message(m.chat.id,url)
+        bot.send_message(m.chat.id,url,reply_markup=hideBoard)
 
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
@@ -49,31 +51,32 @@ def mandar_horario(grado,m):
 # Comprobamos si existe el horario y se actua en consecuencia
 def mandar_examenes(grado,m):
 
-    path = '../archivos/'
-    nombre_fichero = ''
-
     try:
 
         if grado == 'Informática':
-            nombre_fichero = 'calendarioexamenes1617gii.pdf'
-            url = link_horario_gii
+            url = links["link_examenes_gii"]
 
         elif grado == 'Telecomunicaciones':
-            nombre_fichero = 'calendarioexamenes1617gitt.pdf'
-            url = link_horario_gitt
+            url = links["link_examenes_gitt"]
 
         elif grado == 'Informática + matemáticas':
-            nombre_fichero = 'calendarioexamenes1617gim.pdf'
-            url = link_horario_gim
-
+            url = links["link_examenes_gim"]
 
         #Enviar el archivo
-        bot.send_message(m.chat.id,url)
+        bot.send_message(m.chat.id,url, reply_markup=hideBoard)
 
 
     except Exception as e:
         bot.reply_to(m,'Se ha producido un error, intentelo mas tarde')
         #exception_log(e,m)
+
+def mandar_calendario(m):
+
+    cid = m.chat.id
+
+    url = links["link_calendario"]
+
+    bot.send_message(cid,url)
 
 # Función auxiliar usada por el comando "horario"
 def aux_horario(m):
@@ -86,7 +89,17 @@ def aux_examenes(m):
 
     grado = str(m.text)
     mandar_examenes(grado,m)
+ 
+#Función auxiliar para devolver el menú de comedores del dia 
+def aux_menu_dia(m):
 
+    dia = str(m.text)
+    menu = menu_dia(dia)
+    menu = " ".join(menu)
+    bot.send_message(m.chat.id,menu, reply_markup=hideBoard)
+
+
+   
 # Comprueba el tiempo del mensaje y el de arranque del bot, para evitar
 # enviar mensajes que el bot recibio estando apagado
 def check_time(m):

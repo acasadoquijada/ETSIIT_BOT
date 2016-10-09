@@ -6,17 +6,19 @@ import time
 
 # Registro de actividad
 def log(m):
-    user_id = m.from_user.id
-    name = m.from_user.first_name
-    last_name = m.from_user.last_name
-    username = m.from_user.username
-    hour = time.strftime("%H:%M:%S")
-    date = time.strftime("%d/%m/%y")
-    information = "["+ str(date) + ' ' + str(hour) + ' ' +str(name)  + ' ' +  str(last_name) + ' ' + str(user_id) + ' @' + str(username) + "]: " + m.text 
-    
-    aux = open( '../informacion/registro.txt', 'a')
-    aux.write( str(information) + "\n")
-    aux.close()
+    if m.content_type == 'text':
+        if (m.chat.type == 'group' and m.text.startswith("/")) or m.chat.type == 'private':            
+                user_id = m.from_user.id
+                name = m.from_user.first_name
+                last_name = m.from_user.last_name
+                username = m.from_user.username
+                hour = time.strftime("%H:%M:%S")
+                date = time.strftime("%d/%m/%y")
+                information = "["+ str(date) + ' ' + str(hour) + ' ' +str(name)  + ' ' +  str(last_name) + ' ' + str(user_id) + ' @' + str(username) + "]: " + m.text 
+                
+                aux = open( '../informacion/registro.txt', 'a')
+                aux.write( str(information) + "\n")
+                aux.close()
  
 # Registro de excepciones
 def exception_log(e,m):

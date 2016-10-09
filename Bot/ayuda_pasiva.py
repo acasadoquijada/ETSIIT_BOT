@@ -25,5 +25,4 @@ def ayuda_pasiva(m):
                 bot.reply_to(m,mensaje)
         
     except Exception as e:
-        #exception_log(e,m)
-        a=2
+        exception_log(e,m)
