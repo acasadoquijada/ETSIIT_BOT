@@ -1,5 +1,5 @@
 # ETSIIT BOT
-Bot de telegram en python3 sobre la ETSIIT de la universidad de Granada
+Bot de telegram en python3 sobre la ETSIIT de la universidad de Granada (NO OFICIAL Y DESACTUALIZADO)
 
 La idea de este bot es proporcionar información sobre la escuela de manera simple y sencilla.
 
